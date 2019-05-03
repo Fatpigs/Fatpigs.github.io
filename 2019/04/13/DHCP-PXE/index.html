@@ -6,20 +6,26 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>数据结构之栈 | Hexo</title>
+  <title>第四讲 DHCP与PXE | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="首先什么是栈？ 我这里也有一个接地气的比喻栈就是储物箱，栈里面的元素就是储物箱里面的衣服。我们平时放衣服的时候都是一件一件放，一件一件拿出来。那最先放进去的一定是最后被拿出来的，最后放进去的是最先被拿出来的，这就是栈。">
-<meta name="keywords" content="技术,blog,数据结构">
+  <meta name="description" content="DHCPDHCP就是动态分配IP地址的协议，不用自己配置，也不用找网络管理员申请。配置好DHCP Server后有新机器加入网络后便会自动的给新机器分配IP地址">
+<meta name="keywords" content="技术,网络协议,blog">
 <meta property="og:type" content="article">
-<meta property="og:title" content="数据结构之栈">
-<meta property="og:url" content="http://yoursite.com/2019/04/13/zhan-2019-0418-0419/index.html">
+<meta property="og:title" content="第四讲 DHCP与PXE">
+<meta property="og:url" content="http://yoursite.com/2019/04/13/DHCP-PXE/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="首先什么是栈？ 我这里也有一个接地气的比喻栈就是储物箱，栈里面的元素就是储物箱里面的衣服。我们平时放衣服的时候都是一件一件放，一件一件拿出来。那最先放进去的一定是最后被拿出来的，最后放进去的是最先被拿出来的，这就是栈。">
+<meta property="og:description" content="DHCPDHCP就是动态分配IP地址的协议，不用自己配置，也不用找网络管理员申请。配置好DHCP Server后有新机器加入网络后便会自动的给新机器分配IP地址">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-04-30T03:35:08.164Z">
+<meta property="og:image" content="http://yoursite.com/assets/blogImg/DHCP1.jpg">
+<meta property="og:image" content="http://yoursite.com/assets/blogImg/DHCP2.jpg">
+<meta property="og:image" content="http://yoursite.com/assets/blogImg/DHCP3.jpg">
+<meta property="og:image" content="http://yoursite.com/assets/blogImg/DHCP4.jpg">
+<meta property="og:image" content="http://yoursite.com/assets/blogImg/PXE.jpg">
+<meta property="og:updated_time" content="2019-04-30T03:35:16.009Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="数据结构之栈">
-<meta name="twitter:description" content="首先什么是栈？ 我这里也有一个接地气的比喻栈就是储物箱，栈里面的元素就是储物箱里面的衣服。我们平时放衣服的时候都是一件一件放，一件一件拿出来。那最先放进去的一定是最后被拿出来的，最后放进去的是最先被拿出来的，这就是栈。">
+<meta name="twitter:title" content="第四讲 DHCP与PXE">
+<meta name="twitter:description" content="DHCPDHCP就是动态分配IP地址的协议，不用自己配置，也不用找网络管理员申请。配置好DHCP Server后有新机器加入网络后便会自动的给新机器分配IP地址">
+<meta name="twitter:image" content="http://yoursite.com/assets/blogImg/DHCP1.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -180,19 +186,19 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-zhan-2019-0418-0419" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-DHCP-PXE" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      数据结构之栈
+      第四讲 DHCP与PXE
     </h1>
   
 
         
-        <a href="/2019/04/13/zhan-2019-0418-0419/" class="archive-article-date">
+        <a href="/2019/04/13/DHCP-PXE/" class="archive-article-date">
   	<time datetime="2019-04-13T06:48:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-13</time>
 </a>
         
@@ -200,19 +206,11 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="首先什么是栈？-我这里也有一个接地气的比喻"><a href="#首先什么是栈？-我这里也有一个接地气的比喻" class="headerlink" title="首先什么是栈？ 我这里也有一个接地气的比喻"></a>首先什么是栈？ 我这里也有一个接地气的比喻</h3><p>栈就是储物箱，栈里面的元素就是储物箱里面的衣服。我们平时放衣服的时候都是一件一件放，一件一件拿出来。那最先放进去的一定是最后被拿出来的，最后放进去的是最先被拿出来的，这就是栈。 <br></p>
+        <h3 id="DHCP"><a href="#DHCP" class="headerlink" title="DHCP"></a>DHCP</h3><p>DHCP就是动态分配IP地址的协议，不用自己配置，也不用找网络管理员申请。配置好DHCP Server后有新机器加入网络后便会自动的给新机器分配IP地址</p>
 <a id="more"></a>
-<p>所谓栈，先入后出，是一种存储数据的数据结构。栈是一种“操作受限”的线性表，只允许在一端插入和删除数据。栈是可以被数组和链表替代的，但是特定的数据结构适用于特定的场合，同样栈也有专门使用的场合。<br><br>栈可以用数组来实现，也可以用链表来实现。用数组实现叫顺序栈，链表实现叫链式栈。</p>
-<p>顺序栈<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">ArrayStack</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> arr = [];</span><br><span class="line"></span><br><span class="line">    <span class="keyword">this</span>.push = <span class="function"><span class="keyword">function</span> (<span class="params">item</span>) </span>&#123;</span><br><span class="line">        arr.push(item);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">this</span>.pop = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(arr.length == <span class="number">0</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">console</span>.log(<span class="string">"栈已经空了"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">return</span> arr.pop();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">this</span>.top = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> arr[arr.length - <span class="number">1</span>];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">this</span>.count = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> arr.length;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">this</span>.traver = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> arr.toString();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">this</span>.clear = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        arr = [];</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>链式栈代码<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">linkStack</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> Node = <span class="function"><span class="keyword">function</span>(<span class="params">element</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.element = element;</span><br><span class="line">        <span class="keyword">this</span>.next = <span class="literal">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> top;</span><br><span class="line">    <span class="keyword">var</span> length = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">this</span>.push = <span class="function"><span class="keyword">function</span>(<span class="params">element</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> node = <span class="keyword">new</span> Node(element);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(!top)</span><br><span class="line">        &#123;</span><br><span class="line">            top = node;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            node.next = top;</span><br><span class="line">            top = node;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        length++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">this</span>.pop = <span class="function"><span class="keyword">function</span>(<span class="params">element</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(!top)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">console</span>.log(<span class="string">"栈已经空啦"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">var</span> temp = top.element;</span><br><span class="line">            top = top.next;</span><br><span class="line">            length--;</span><br><span class="line">            <span class="keyword">return</span> temp;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">this</span>.clear = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        top = <span class="literal">null</span>;</span><br><span class="line">        length = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">this</span>.top = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> top.element;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">this</span>.traverse = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(!top)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">console</span>.log(<span class="string">"栈没有元素怎么遍历"</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">var</span> temp = top;</span><br><span class="line">        <span class="keyword">while</span>(temp)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">console</span>.log(temp.element);</span><br><span class="line">            temp = temp.next;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">this</span>.count = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> length;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h3 id="时空复杂度"><a href="#时空复杂度" class="headerlink" title="时空复杂度"></a>时空复杂度</h3><p>js的栈的时空复杂度更好分析，空间复杂度不用说了，就入栈和遍历的时候多开辟了一个空间，所以空间复杂度是O(1),时间复杂度就是入栈、出栈操作，因为js的数组也没有动态扩容所以就是O(1)<br><br>另外其他语言的栈在有动态扩容的情况下的时空复杂度也是O(1)</p>
-<h3 id="栈的应用"><a href="#栈的应用" class="headerlink" title="栈的应用"></a>栈的应用</h3><p>1.函数调用栈</p>
-<p>操作系统给每个线程分配了独立的内存空间，这个内存空间被组织成”栈”这种结构，用来存储函数调用的临时变量。每进入一个函数就会把函数中的变量压入栈，当函数执行完之后，这个函数对应的栈帧出栈(就是这个函数中第一个压入栈的变量出栈)</p>
-<p>2.表达式求值</p>
-<p>代码</p>
-<p>3.括号匹配</p>
-<p>代码</p>
-<p>leetcode习题代码</p>
+<p>当新机器加入网络之后，一脸懵，他只知道自己的Mac地址，剩下的什么也不知道。所以这个时候他向网络中发送一个广播说道:我是Mac地址为×××的机器，有人愿意给我一个IP地址嘛？这一个步骤就叫做DHCP Discover。包格式如下:<br><br><img src="/assets/blogImg/DHCP1.jpg" alt="DHCP Discover"><br>DHCP Server就相当于IP管理员，如果这个网络配置了DHCP Server，那么IP管理员就会根据机器的Mac地址来判断他是否是一个新机器，所以Mac地址必须要是唯一的，在这里也能体现，如果两台机器Mac地址相同，那么分配IP地址的时候就会混乱，IP管理员不能判断这是不是一个新机器，就没法分配IP地址。如果这个Mac地址第一次出现，那IP管理员就会发回一个包，包里内容包括我分配了一个可用的 IP 给你，你看如何？除此之外，服务器还发送了子网掩码、网关和 IP 地址租用期等。这一个过程成为DHCP Offer，包格式如下:<br><br><img src="/assets/blogImg/DHCP2.jpg" alt="DHCP Offer"><br>如果新机器同时收到了多个IP管理员的回复，那他一般会接受最先到达的那个DHCP Offer，一般是最先到达的那个，并且会向网络发送一个DHCP Request 广播数据包，包中包含客户端的MAC 地址、接受的租约中的 IP 地址、提供此租约的 DHCP 服务器地址等，并告诉所有 DHCP Server 它将接受哪一台服务器提供的IP 地址，告诉其他 DHCP 服务器，谢谢你们的接纳，并并请求撤销它们提供的 IP 地址。包格式如下:<br><br><img src="/assets/blogImg/DHCP3.jpg" alt="DHCP3"><br>当 DHCP Server 接收到客户机的 DHCP request 之后，会广播返回给客户机一个 DHCP ACK 消息包，表明已经接受客户机的选择，并将这一 IP 地址的合法租用信息和其他的配置信息都放入该广播包，发给客户机，欢迎它加入网络大家庭。包格式如下:<br><br><img src="/assets/blogImg/DHCP4.jpg" alt="DHCP4"><br>最终租约达成的时候，还是需要广播一下，让大家都知道。<br><br>从以上的步骤中我们可以看出，虽然我们加入一个网络的时候瞬间就可以使用这个网络并获得IP地址，但是其实是进行了很多操作的，完整的DHCP分配IP地址，需要进行5个步骤才可以完成IP地址的分配，够麻烦的了吧！</p>
+<h3 id="PXE"><a href="#PXE" class="headerlink" title="PXE"></a>PXE</h3><p>数据中心的电脑都是没操作系统的，分配IP地址还不够，如果能自动安装操作系统那就更perfect了！PXE协议就是做这个事的，就是在启动BIOS，然后启动PXE客户端，这时候会通过DHCP协议获得自己的IP地址，然后PXE客户端去PXE服务器下载操作系统文件，下载使用的协议是TFTP协议，所以还需要一个TFTP服务器，PXE客户端向TFTP服务器请求下载文件，TFTP服务器说好啊，就把文件传给他。<br>PXE客户端收到文件便执行文件，这个文件只想PXE客户端，向TFTP服务器再请求一系列的配置文件以及linux内核。都请求完毕，最后启动 Linux 内核，就大功告成了。</p>
+<p><img src="/assets/blogImg/PXE.jpg" alt="PXE"> </p>
 
       
 
@@ -251,11 +249,11 @@ var _hmt = _hmt || [];
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">blog</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">网络协议</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">blog</a>
         		</li>
       		
 		</ul>
@@ -311,7 +309,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/04/13/zhan-2019-0418-0419/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/04/13/DHCP-PXE/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -325,18 +323,18 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
-    <a href="/2019/04/13/programm-2019-0420-0421/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/04/13/mvc-mvvm/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          小程序 后端第一天
+          MVC与MVVM
         
       </div>
     </a>
   
   
-    <a href="/2019/04/13/MAC/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">MAC层</div>
+    <a href="/2019/04/13/test/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">test</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -363,7 +361,7 @@ var _hmt = _hmt || [];
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#首先什么是栈？-我这里也有一个接地气的比喻"><span class="toc-number">1.</span> <span class="toc-text">首先什么是栈？ 我这里也有一个接地气的比喻</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#时空复杂度"><span class="toc-number">2.</span> <span class="toc-text">时空复杂度</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#栈的应用"><span class="toc-number">3.</span> <span class="toc-text">栈的应用</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#DHCP"><span class="toc-number">1.</span> <span class="toc-text">DHCP</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#PXE"><span class="toc-number">2.</span> <span class="toc-text">PXE</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -377,7 +375,7 @@ var _hmt = _hmt || [];
   
   <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="zhan-2019-0418-0419" data-title="数据结构之栈" data-url="http://yoursite.com/2019/04/13/zhan-2019-0418-0419/"></div>
+	<div class="ds-thread" data-thread-key="DHCP-PXE" data-title="第四讲 DHCP与PXE" data-url="http://yoursite.com/2019/04/13/DHCP-PXE/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">

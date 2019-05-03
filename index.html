@@ -177,170 +177,6 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-test" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/04/13/test/">test</a>
-    </h1>
-  
-
-        
-        <a href="/2019/04/13/test/" class="archive-article-date">
-  	<time datetime="2019-04-13T06:48:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-13</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>人的回忆真是个奇怪的东西，正在经历的事情变成了回忆，那这回忆便会增添了几分色彩。回忆总是会轻松一些的！我回忆着18岁的种种，尽管那时候生活并不阳光明媚，但是现在回忆起来，那时候的生活很美好的，每天有夕阳看，每天有自己的世界！</p>
-        
-          <a class="article-more-a" href="/2019/04/13/test/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">diary</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/04/13/test/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-zhan-2019-0418-0419" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/04/13/zhan-2019-0418-0419/">数据结构之栈</a>
-    </h1>
-  
-
-        
-        <a href="/2019/04/13/zhan-2019-0418-0419/" class="archive-article-date">
-  	<time datetime="2019-04-13T06:48:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-13</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="首先什么是栈？-我这里也有一个接地气的比喻"><a href="#首先什么是栈？-我这里也有一个接地气的比喻" class="headerlink" title="首先什么是栈？ 我这里也有一个接地气的比喻"></a>首先什么是栈？ 我这里也有一个接地气的比喻</h3><p>栈就是储物箱，栈里面的元素就是储物箱里面的衣服。我们平时放衣服的时候都是一件一件放，一件一件拿出来。那最先放进去的一定是最后被拿出来的，最后放进去的是最先被拿出来的，这就是栈。 <br><br>所谓栈，先入后出，是一种存储数据的数据结构。栈是一种“操作受限”的线性表，只允许在一端插入和删除数据。栈是可以被数组和链表替代的，但是特定的数据结构适用于特定的场合，同样栈也有专门使用的场合。<br><br>栈可以用数组来实现，也可以用链表来实现。用数组实现叫顺序栈，链表实现叫链式栈。</p>
-<p>顺序栈<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">function ArrayStack()&#123;</span><br><span class="line"></span><br><span class="line">    var arr = [];</span><br><span class="line"></span><br><span class="line">    this.push = function (item) &#123;</span><br><span class="line">        arr.push(item);</span><br><span class="line">    &#125;</span><br><span class="line">    this.pop = function () &#123;</span><br><span class="line">        if(arr.length == 0)</span><br><span class="line">        &#123;</span><br><span class="line">            console.log(&quot;栈已经空了&quot;);</span><br><span class="line">        &#125;</span><br><span class="line">        else</span><br><span class="line">        &#123;</span><br><span class="line">            return arr.pop();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    this.top = function () &#123;</span><br><span class="line">        return arr[arr.length - 1];</span><br><span class="line">    &#125;</span><br><span class="line">    this.count = function () &#123;</span><br><span class="line">        return arr.length;</span><br><span class="line">    &#125;</span><br><span class="line">    this.traver = function () &#123;</span><br><span class="line">        return arr.toString();</span><br><span class="line">    &#125;</span><br><span class="line">    this.clear = function () &#123;</span><br><span class="line">        arr = [];</span><br><span class="line">        return true;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>链式栈代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><span class="line">function linkStack() &#123;</span><br><span class="line"></span><br><span class="line">    var Node = function(element) &#123;</span><br><span class="line">        this.element = element;</span><br><span class="line">        this.next = null;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    var top;</span><br><span class="line">    var length = 0;</span><br><span class="line"></span><br><span class="line">    this.push = function(element) &#123;</span><br><span class="line">        var node = new Node(element);</span><br><span class="line"></span><br><span class="line">        if(!top)</span><br><span class="line">        &#123;</span><br><span class="line">            top = node;</span><br><span class="line">        &#125;</span><br><span class="line">        else</span><br><span class="line">        &#123;</span><br><span class="line">            node.next = top;</span><br><span class="line">            top = node;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        length++;</span><br><span class="line">    &#125;</span><br><span class="line">    this.pop = function(element) &#123;</span><br><span class="line">        if(!top)</span><br><span class="line">        &#123;</span><br><span class="line">            console.log(&quot;栈已经空啦&quot;);</span><br><span class="line">        &#125;</span><br><span class="line">        else</span><br><span class="line">        &#123;</span><br><span class="line">            var temp = top.element;</span><br><span class="line">            top = top.next;</span><br><span class="line">            length--;</span><br><span class="line">            return temp;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    this.clear = function() &#123;</span><br><span class="line">        top = null;</span><br><span class="line">        length = 0;</span><br><span class="line">        return true;</span><br><span class="line">    &#125;</span><br><span class="line">    this.top = function() &#123;</span><br><span class="line">        return top.element;</span><br><span class="line">    &#125;</span><br><span class="line">    this.traverse = function() &#123;</span><br><span class="line">        if(!top)</span><br><span class="line">        &#123;</span><br><span class="line">            console.log(&quot;栈没有元素怎么遍历&quot;);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        var temp = top;</span><br><span class="line">        while(temp)</span><br><span class="line">        &#123;</span><br><span class="line">            console.log(temp.element);</span><br><span class="line">            temp = temp.next;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    this.count = function() &#123;</span><br><span class="line">        return length;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h3 id="时空复杂度"><a href="#时空复杂度" class="headerlink" title="时空复杂度"></a>时空复杂度</h3><p>js的栈的时空复杂度更好分析，空间复杂度不用说了，就入栈和遍历的时候多开辟了一个空间，所以空间复杂度是O(1),时间复杂度就是入栈、出栈操作，因为js的数组也没有动态扩容所以就是O(1)<br><br>另外其他语言的栈在有动态扩容的情况下的时空复杂度也是O(1)</p>
-<h3 id="栈的应用"><a href="#栈的应用" class="headerlink" title="栈的应用"></a>栈的应用</h3><p>1.函数调用栈</p>
-<p>操作系统给每个线程分配了独立的内存空间，这个内存空间被组织成”栈”这种结构，用来存储函数调用的临时变量。每进入一个函数就会把函数中的变量压入栈，当函数执行完之后，这个函数对应的栈帧出栈(就是这个函数中第一个压入栈的变量出栈)</p>
-<p>2.表达式求值</p>
-<p>代码</p>
-<p>3.括号匹配</p>
-<p>代码</p>
-<p>leetcode习题代码</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">blog</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/04/13/zhan-2019-0418-0419/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
     <article id="post-diary-2019-0419-0420" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -497,6 +333,666 @@ var _hmt = _hmt || [];
 
 
   
+    <article id="post-mvc-mvvm" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/04/13/mvc-mvvm/">MVC与MVVM</a>
+    </h1>
+  
+
+        
+        <a href="/2019/04/13/mvc-mvvm/" class="archive-article-date">
+  	<time datetime="2019-04-13T06:48:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-13</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>一直听见MVC – MVVM 这两个</p>
+        
+          <a class="article-more-a" href="/2019/04/13/mvc-mvvm/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">技术</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">blog</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/04/13/mvc-mvvm/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-DHCP-PXE" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/04/13/DHCP-PXE/">第四讲 DHCP与PXE</a>
+    </h1>
+  
+
+        
+        <a href="/2019/04/13/DHCP-PXE/" class="archive-article-date">
+  	<time datetime="2019-04-13T06:48:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-13</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="DHCP"><a href="#DHCP" class="headerlink" title="DHCP"></a>DHCP</h3><p>DHCP就是动态分配IP地址的协议，不用自己配置，也不用找网络管理员申请。配置好DHCP Server后有新机器加入网络后便会自动的给新机器分配IP地址</p>
+        
+          <a class="article-more-a" href="/2019/04/13/DHCP-PXE/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">技术</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">网络协议</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">blog</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/04/13/DHCP-PXE/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-test" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/04/13/test/">test</a>
+    </h1>
+  
+
+        
+        <a href="/2019/04/13/test/" class="archive-article-date">
+  	<time datetime="2019-04-13T06:48:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-13</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>人的回忆真是个奇怪的东西，正在经历的事情变成了回忆，那这回忆便会增添了几分色彩。回忆总是会轻松一些的！我回忆着18岁的种种，尽管那时候生活并不阳光明媚，但是现在回忆起来，那时候的生活很美好的，每天有夕阳看，每天有自己的世界！</p>
+        
+          <a class="article-more-a" href="/2019/04/13/test/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">diary</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/04/13/test/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-programm-2019-0420-0421" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/04/13/programm-2019-0420-0421/">小程序 后端第一天</a>
+    </h1>
+  
+
+        
+        <a href="/2019/04/13/programm-2019-0420-0421/" class="archive-article-date">
+  	<time datetime="2019-04-13T06:48:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-13</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="小程序-后端第一天"><a href="#小程序-后端第一天" class="headerlink" title="小程序 后端第一天"></a>小程序 后端第一天</h3><p>上午做了tabbar组件，对组件算是有一点简单的了解了吧！也对学习有了一些了解，上午由于一直在凭着自己感觉改代码，浪费了不少时间啊，后来只查了查文档，看了一篇文章就把组件的基础了解了一下，了解了也就知道应该怎么改了。<br>
+        
+          <a class="article-more-a" href="/2019/04/13/programm-2019-0420-0421/#more">more >></a>
+        
+      
+
+      
+    </p></div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">技术</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">小程序</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">blog</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/04/13/programm-2019-0420-0421/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-zhan-2019-0418-0419" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/04/13/zhan-2019-0418-0419/">数据结构之栈</a>
+    </h1>
+  
+
+        
+        <a href="/2019/04/13/zhan-2019-0418-0419/" class="archive-article-date">
+  	<time datetime="2019-04-13T06:48:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-13</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="首先什么是栈？-我这里也有一个接地气的比喻"><a href="#首先什么是栈？-我这里也有一个接地气的比喻" class="headerlink" title="首先什么是栈？ 我这里也有一个接地气的比喻"></a>首先什么是栈？ 我这里也有一个接地气的比喻</h3><p>栈就是储物箱，栈里面的元素就是储物箱里面的衣服。我们平时放衣服的时候都是一件一件放，一件一件拿出来。那最先放进去的一定是最后被拿出来的，最后放进去的是最先被拿出来的，这就是栈。 <br></p>
+        
+          <a class="article-more-a" href="/2019/04/13/zhan-2019-0418-0419/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">技术</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">blog</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/04/13/zhan-2019-0418-0419/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-MAC" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/04/13/MAC/">MAC层</a>
+    </h1>
+  
+
+        
+        <a href="/2019/04/13/MAC/" class="archive-article-date">
+  	<time datetime="2019-04-13T06:48:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-13</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="从物理层到MAC层"><a href="#从物理层到MAC层" class="headerlink" title="从物理层到MAC层"></a>从物理层到MAC层</h3><p>故事从我们的宿舍讲起哈，我和一个室友有的时候喜欢联机打魔兽争霸3，但下载平台显然是太太麻烦了，所以我们直接在宿舍组一个局域网来玩魔兽？那局域网是怎么组的，就是这个文章所讲解的内容。</p>
+        
+          <a class="article-more-a" href="/2019/04/13/MAC/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">技术</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">网络协议</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">blog</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/04/13/MAC/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-ICMP-Ping" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/04/13/ICMP-Ping/">MAC层</a>
+    </h1>
+  
+
+        
+        <a href="/2019/04/13/ICMP-Ping/" class="archive-article-date">
+  	<time datetime="2019-04-13T06:48:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-13</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="Ping是如何工作的"><a href="#Ping是如何工作的" class="headerlink" title="Ping是如何工作的"></a>Ping是如何工作的</h3><p>网络不好的时候你都想去ping一下，那你知道ping是怎么工作的嘛？<br>ping是基于ICMP协议的，ICMP又是什么？ ICMP全称是 Internet Control Message Protocol，就是互联网控制报文协议，那他是怎么控制的呢？</p>
+<p>网络包在互联网的传输过程中，往往会出现很多的问题，当遇到问题的时候就要像解决方法，要传送出消息来，报告情况，这样才可以调整传输的策略。这就像古代行军的时候，需要有侦察兵先打探消息，如果派出的侦察兵回来了，那没什么问题，这条路可以走，如果只有侦察兵的马回来了，这条路上就有问题。ICMP的作用就和侦察兵很像</p>
+<p>ICMP报文是封装在IP包里的，他本身非常简单<br><img src="/assets/blogImg/ICMP.jpg" alt="DHCP Offer"> </p>
+<p>ICMP的报文类型有很多，不同类型有不同的代码。主动请求的报文类型为8，主动请求应答报文类型为0。差错报文类型分几种，终点不可达为3，源抑制为4，超市为11，重定向为5.</p>
+<p>查询报文类型(也就是主动请求)</p>
+<p>差错报文类型</p>
+<p>查询报文类型的使用:ping</p>
+<p>首先我们重点看ping的发送和接受过程</p>
+<p><img src="/assets/blogImg/ping.jpg" alt="DHCP Offer"><br>我发现网络包的传输都是封装与拆分的过程，发ping的请求也是这个过程，首先封装ICMP报文、然后IP、然后MAC，如果发送目标收到这个包的时候，首先看MAC一不一样、然后看IP一不一样，都一样的话，再封装一个回复的ICMP发回来，都是这样一个过程。</p>
+<p>差错报文类型的使用:Traceroute</p>
+<p>Traceroute是故意产生错误场景的，一个作用是要拿到所有路由器的IP，这个现在不想写了，是通过设置TTL实现的。<br>还有一个作用是Traceroute 还有一个作用是故意设置不分片，从而确定路径的MTU(最大传输单元，是指一种通信协议的某一层上面所能通过的最大数据包大小)</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">技术</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">网络协议</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">blog</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/04/13/ICMP-Ping/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-theHero" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/04/13/theHero/">权游--英雄的谢幕</a>
+    </h1>
+  
+
+        
+        <a href="/2019/04/13/theHero/" class="archive-article-date">
+  	<time datetime="2019-04-13T06:48:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-13</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>放好那首 The Night King，调整姿势做好，让自己的情感稍稍微走进那段传奇，仪式感很重要，在仪式下来写一写那些英雄隆重的谢幕！</p>
+<p>冰与火的战争从最开始的第一季第一集埋下伏笔，到了这一集最终爆发，着实上演了最最澎湃的战争大戏。这并不是权力的游戏，而是生者与死者的战争，这无关冰火大陆上的任何一个贵族，无关他们的权力，他们的财富、他们的权谋算计在这场战争中丝毫不值得一提，这是关乎人类的战争，输了这一场，人类将会失去所有！</p>
+<p>人类最终赢了，但是这赢却付出了惨痛的代价，超过半数的英雄们死在了这场战争中，那些从我高中就一直将自己感情寄予其中的英雄们，我一直当做我的榜样的英雄们，永远止步与了这场战争中。再也不会看到他们了，但是幸好，节目组给了他们一个隆重的谢幕！</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/04/13/theHero/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
   
 
 
@@ -594,11 +1090,27 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
+                <a href="javascript:void(0)" class="js-tag color3">技术</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">网络协议</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">小程序</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">blog</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
             
             <div class="clearfix"></div>

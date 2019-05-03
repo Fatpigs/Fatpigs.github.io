@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>数据结构之栈 | Hexo</title>
+  <title>小程序 后端第一天 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="首先什么是栈？ 我这里也有一个接地气的比喻栈就是储物箱，栈里面的元素就是储物箱里面的衣服。我们平时放衣服的时候都是一件一件放，一件一件拿出来。那最先放进去的一定是最后被拿出来的，最后放进去的是最先被拿出来的，这就是栈。">
-<meta name="keywords" content="技术,blog,数据结构">
+  <meta name="description" content="小程序 后端第一天上午做了tabbar组件，对组件算是有一点简单的了解了吧！也对学习有了一些了解，上午由于一直在凭着自己感觉改代码，浪费了不少时间啊，后来只查了查文档，看了一篇文章就把组件的基础了解了一下，了解了也就知道应该怎么改了。">
+<meta name="keywords" content="技术,小程序,blog">
 <meta property="og:type" content="article">
-<meta property="og:title" content="数据结构之栈">
-<meta property="og:url" content="http://yoursite.com/2019/04/13/zhan-2019-0418-0419/index.html">
+<meta property="og:title" content="小程序 后端第一天">
+<meta property="og:url" content="http://yoursite.com/2019/04/13/programm-2019-0420-0421/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="首先什么是栈？ 我这里也有一个接地气的比喻栈就是储物箱，栈里面的元素就是储物箱里面的衣服。我们平时放衣服的时候都是一件一件放，一件一件拿出来。那最先放进去的一定是最后被拿出来的，最后放进去的是最先被拿出来的，这就是栈。">
+<meta property="og:description" content="小程序 后端第一天上午做了tabbar组件，对组件算是有一点简单的了解了吧！也对学习有了一些了解，上午由于一直在凭着自己感觉改代码，浪费了不少时间啊，后来只查了查文档，看了一篇文章就把组件的基础了解了一下，了解了也就知道应该怎么改了。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-04-30T03:35:08.164Z">
+<meta property="og:updated_time" content="2019-04-30T03:35:12.032Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="数据结构之栈">
-<meta name="twitter:description" content="首先什么是栈？ 我这里也有一个接地气的比喻栈就是储物箱，栈里面的元素就是储物箱里面的衣服。我们平时放衣服的时候都是一件一件放，一件一件拿出来。那最先放进去的一定是最后被拿出来的，最后放进去的是最先被拿出来的，这就是栈。">
+<meta name="twitter:title" content="小程序 后端第一天">
+<meta name="twitter:description" content="小程序 后端第一天上午做了tabbar组件，对组件算是有一点简单的了解了吧！也对学习有了一些了解，上午由于一直在凭着自己感觉改代码，浪费了不少时间啊，后来只查了查文档，看了一篇文章就把组件的基础了解了一下，了解了也就知道应该怎么改了。">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -180,19 +180,19 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-zhan-2019-0418-0419" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-programm-2019-0420-0421" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      数据结构之栈
+      小程序 后端第一天
     </h1>
   
 
         
-        <a href="/2019/04/13/zhan-2019-0418-0419/" class="archive-article-date">
+        <a href="/2019/04/13/programm-2019-0420-0421/" class="archive-article-date">
   	<time datetime="2019-04-13T06:48:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-13</time>
 </a>
         
@@ -200,20 +200,13 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="首先什么是栈？-我这里也有一个接地气的比喻"><a href="#首先什么是栈？-我这里也有一个接地气的比喻" class="headerlink" title="首先什么是栈？ 我这里也有一个接地气的比喻"></a>首先什么是栈？ 我这里也有一个接地气的比喻</h3><p>栈就是储物箱，栈里面的元素就是储物箱里面的衣服。我们平时放衣服的时候都是一件一件放，一件一件拿出来。那最先放进去的一定是最后被拿出来的，最后放进去的是最先被拿出来的，这就是栈。 <br></p>
-<a id="more"></a>
-<p>所谓栈，先入后出，是一种存储数据的数据结构。栈是一种“操作受限”的线性表，只允许在一端插入和删除数据。栈是可以被数组和链表替代的，但是特定的数据结构适用于特定的场合，同样栈也有专门使用的场合。<br><br>栈可以用数组来实现，也可以用链表来实现。用数组实现叫顺序栈，链表实现叫链式栈。</p>
-<p>顺序栈<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">ArrayStack</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> arr = [];</span><br><span class="line"></span><br><span class="line">    <span class="keyword">this</span>.push = <span class="function"><span class="keyword">function</span> (<span class="params">item</span>) </span>&#123;</span><br><span class="line">        arr.push(item);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">this</span>.pop = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(arr.length == <span class="number">0</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">console</span>.log(<span class="string">"栈已经空了"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">return</span> arr.pop();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">this</span>.top = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> arr[arr.length - <span class="number">1</span>];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">this</span>.count = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> arr.length;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">this</span>.traver = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> arr.toString();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">this</span>.clear = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        arr = [];</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>链式栈代码<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">linkStack</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> Node = <span class="function"><span class="keyword">function</span>(<span class="params">element</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.element = element;</span><br><span class="line">        <span class="keyword">this</span>.next = <span class="literal">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> top;</span><br><span class="line">    <span class="keyword">var</span> length = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">this</span>.push = <span class="function"><span class="keyword">function</span>(<span class="params">element</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> node = <span class="keyword">new</span> Node(element);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(!top)</span><br><span class="line">        &#123;</span><br><span class="line">            top = node;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            node.next = top;</span><br><span class="line">            top = node;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        length++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">this</span>.pop = <span class="function"><span class="keyword">function</span>(<span class="params">element</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(!top)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">console</span>.log(<span class="string">"栈已经空啦"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">var</span> temp = top.element;</span><br><span class="line">            top = top.next;</span><br><span class="line">            length--;</span><br><span class="line">            <span class="keyword">return</span> temp;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">this</span>.clear = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        top = <span class="literal">null</span>;</span><br><span class="line">        length = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">this</span>.top = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> top.element;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">this</span>.traverse = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(!top)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">console</span>.log(<span class="string">"栈没有元素怎么遍历"</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">var</span> temp = top;</span><br><span class="line">        <span class="keyword">while</span>(temp)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">console</span>.log(temp.element);</span><br><span class="line">            temp = temp.next;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">this</span>.count = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> length;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h3 id="时空复杂度"><a href="#时空复杂度" class="headerlink" title="时空复杂度"></a>时空复杂度</h3><p>js的栈的时空复杂度更好分析，空间复杂度不用说了，就入栈和遍历的时候多开辟了一个空间，所以空间复杂度是O(1),时间复杂度就是入栈、出栈操作，因为js的数组也没有动态扩容所以就是O(1)<br><br>另外其他语言的栈在有动态扩容的情况下的时空复杂度也是O(1)</p>
-<h3 id="栈的应用"><a href="#栈的应用" class="headerlink" title="栈的应用"></a>栈的应用</h3><p>1.函数调用栈</p>
-<p>操作系统给每个线程分配了独立的内存空间，这个内存空间被组织成”栈”这种结构，用来存储函数调用的临时变量。每进入一个函数就会把函数中的变量压入栈，当函数执行完之后，这个函数对应的栈帧出栈(就是这个函数中第一个压入栈的变量出栈)</p>
-<p>2.表达式求值</p>
-<p>代码</p>
-<p>3.括号匹配</p>
-<p>代码</p>
-<p>leetcode习题代码</p>
-
+        <h3 id="小程序-后端第一天"><a href="#小程序-后端第一天" class="headerlink" title="小程序 后端第一天"></a>小程序 后端第一天</h3><p>上午做了tabbar组件，对组件算是有一点简单的了解了吧！也对学习有了一些了解，上午由于一直在凭着自己感觉改代码，浪费了不少时间啊，后来只查了查文档，看了一篇文章就把组件的基础了解了一下，了解了也就知道应该怎么改了。<br><a id="more"></a><br>首先每个组件和每个页面一样都有4个文件</p>
+<p>.wxml文件 不用说了就是组件的结构，可以在组件中添加<code>&lt;slot&gt;</code>标签,在引用组件的其他页面可以将自己想要放的内容放进<code>&lt;slot&gt;</code>标签里<br>.wxss文件 组件的样式，这里要说一下组件的wxss不能使用id、属性、标签选择器<br>.json文件 我这里主要就只用了一行代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">将组件属性设置为true</span><br><span class="line">&#123;</span><br><span class="line">    &quot;component&quot;: true,</span><br><span class="line">    &quot;usingComponents&quot;: &#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>.js文件 组件和页面一样也有生命周期，但生命周期的时间点不一样</p>
+<p>组件实例刚刚被创建好时， created 生命周期被触发。此时，组件数据 this.data 就是在 Component 构造器中定义的数据 data。此时还不能调用 setData 。 通常情况下，这个生命周期只应该用于给组件 this 添加一些自定义属性字段。<br><br>在组件完全初始化完毕、进入页面节点树后， attached 生命周期被触发。此时， this.data 已被初始化为组件的当前值。这个生命周期很有用，绝大多数初始化工作可以在这个时机进行。<br><br>在组件离开页面节点树后， detached 生命周期被触发。退出一个页面时，如果组件还在页面节点树中，则 detached 会被触发。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line">var sliderWidth = 96; // 需要设置slider的宽度，用于计算中间位置</span><br><span class="line">// components/component-tag-name.js</span><br><span class="line">Component(&#123;</span><br><span class="line">  /**</span><br><span class="line">   * 组件的属性列表</span><br><span class="line">   */</span><br><span class="line">  options: &#123;</span><br><span class="line">    multipleSlots: true // 在组件定义时的选项中启用多slot支持,我需要用到这个</span><br><span class="line">  &#125;,</span><br><span class="line">  //组件的属性都得在这里注册，这里看网上的别人做的实例被坑了,需要在这里注册属性，不然其他页面不能覆盖这个值</span><br><span class="line">  properties: &#123;</span><br><span class="line">    tabs: Array</span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">  /**</span><br><span class="line">   * 组件的初始数据</span><br><span class="line">   */</span><br><span class="line">  data: &#123;</span><br><span class="line">    activeIndex: 0,</span><br><span class="line">    sliderOffset: 0,</span><br><span class="line">    sliderLeft: 0</span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">  /**</span><br><span class="line">   * 组件的方法列表都在这里定义</span><br><span class="line">   */</span><br><span class="line">  methods: &#123;</span><br><span class="line">    tabClick: function (e) &#123;</span><br><span class="line">      this.setData(&#123;</span><br><span class="line">        sliderOffset: e.currentTarget.offsetLeft,</span><br><span class="line">        activeIndex: e.currentTarget.id</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  attached: function () &#123;</span><br><span class="line">    var that = this;</span><br><span class="line">    wx.getSystemInfo(&#123;</span><br><span class="line">      success: function (res) &#123;</span><br><span class="line">        that.setData(&#123;</span><br><span class="line">          sliderLeft: (res.windowWidth / that.data.tabs.length - sliderWidth) / 2,</span><br><span class="line">          sliderOffset: res.windowWidth / that.data.tabs.length * that.data.activeIndex</span><br><span class="line">        &#125;);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>下午学习了数据的基本操作，增加数据，查询数据。以及在商品列表也中跳转到列表详情界面，怎么带着列表页书籍的信息。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">//就是生成列表的代码  在给bookList赋值的时候，直接将objectId的值获取，然后点击这个列表项，直接跳到详情页面，是这样操作的</span><br><span class="line"></span><br><span class="line">.wxml代码</span><br><span class="line">&lt;navigator wx:for=&quot;&#123;&#123;bookList&#125;&#125;&quot; url=&quot;/pages/productlist/productdetail/productdetail?objectId=&#123;&#123;item.objectId&#125;&#125;&quot;&gt;</span><br><span class="line">&lt;/navigator&gt;</span><br><span class="line"></span><br><span class="line">.js代码</span><br><span class="line">var bookList = new Array();</span><br><span class="line">        const query = Bmob.Query(&quot;Books&quot;);</span><br><span class="line">        query.equalTo(&quot;userId&quot;, &quot;==&quot;, userid);</span><br><span class="line">        query.find().then(result =&gt; &#123;</span><br><span class="line">          console.log(result)</span><br><span class="line">          for (var i = 0; i &lt; result.length; i++) &#123;</span><br><span class="line">            var id = result[i].id; //消息的id</span><br><span class="line">            var objectId = result[i].objectId;</span><br><span class="line">            var bookName = result[i].bookName;</span><br><span class="line">            var bookAuthor = result[i].bookAuthor;</span><br><span class="line">            var bookPrice = result[i].bookPrice;</span><br><span class="line">            var bookInfo = result[i].bookInfo;</span><br><span class="line">            var jsonA;</span><br><span class="line">            jsonA = &#123;</span><br><span class="line">              &quot;objectId&quot;: objectId || &apos;&apos;,</span><br><span class="line">              &quot;bookName&quot;: bookName || &apos;&apos;,</span><br><span class="line">              &quot;bookAuthor&quot;: bookAuthor || &apos;&apos;,</span><br><span class="line">              &quot;bookPrice&quot;: bookPrice || &apos;&apos;,</span><br><span class="line">              &quot;bookInfo&quot;: bookInfo || &apos;&apos;</span><br><span class="line">            &#125;</span><br><span class="line">            bookList.push(jsonA);</span><br><span class="line">          &#125;</span><br><span class="line">          console.log(bookList);</span><br><span class="line">          that.setData(&#123;</span><br><span class="line">            bookList: bookList</span><br><span class="line">          &#125;)</span><br></pre></td></tr></table></figure>
       
 
       
@@ -251,11 +244,11 @@ var _hmt = _hmt || [];
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">blog</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">小程序</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">blog</a>
         		</li>
       		
 		</ul>
@@ -311,7 +304,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/04/13/zhan-2019-0418-0419/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/04/13/programm-2019-0420-0421/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -325,18 +318,18 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
-    <a href="/2019/04/13/programm-2019-0420-0421/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/04/13/test/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          小程序 后端第一天
+          test
         
       </div>
     </a>
   
   
-    <a href="/2019/04/13/MAC/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">MAC层</div>
+    <a href="/2019/04/13/zhan-2019-0418-0419/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">数据结构之栈</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -363,7 +356,7 @@ var _hmt = _hmt || [];
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#首先什么是栈？-我这里也有一个接地气的比喻"><span class="toc-number">1.</span> <span class="toc-text">首先什么是栈？ 我这里也有一个接地气的比喻</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#时空复杂度"><span class="toc-number">2.</span> <span class="toc-text">时空复杂度</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#栈的应用"><span class="toc-number">3.</span> <span class="toc-text">栈的应用</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#小程序-后端第一天"><span class="toc-number">1.</span> <span class="toc-text">小程序 后端第一天</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -377,7 +370,7 @@ var _hmt = _hmt || [];
   
   <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="zhan-2019-0418-0419" data-title="数据结构之栈" data-url="http://yoursite.com/2019/04/13/zhan-2019-0418-0419/"></div>
+	<div class="ds-thread" data-thread-key="programm-2019-0420-0421" data-title="小程序 后端第一天" data-url="http://yoursite.com/2019/04/13/programm-2019-0420-0421/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
