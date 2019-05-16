@@ -8,20 +8,20 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>第七讲 ICMP-Ping | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Ping是如何工作的网络不好的时候你都想去ping一下，那你知道ping是怎么工作的嘛？ping是基于ICMP协议的，ICMP又是什么？ ICMP全称是 Internet Control Message Protocol，就是互联网控制报文协议，那他是怎么控制的呢？ 网络包在互联网的传输过程中，往往会出现很多的问题，当遇到问题的时候就要像解决方法，要传送出消息来，报告情况，这样才可以调整传输的策略">
+  <meta name="description" content="Ping是如何工作的网络不好的时候你都想去ping一下，那你知道ping是怎么工作的嘛？ping是基于ICMP协议的，ICMP又是什么？ ICMP全称是 Internet Control Message Protocol，就是互联网控制报文协议，那他是怎么控制的呢？">
 <meta name="keywords" content="技术,blog,网络协议">
 <meta property="og:type" content="article">
 <meta property="og:title" content="第七讲 ICMP-Ping">
 <meta property="og:url" content="http://yoursite.com/2019/05/04/ICMP-Ping/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Ping是如何工作的网络不好的时候你都想去ping一下，那你知道ping是怎么工作的嘛？ping是基于ICMP协议的，ICMP又是什么？ ICMP全称是 Internet Control Message Protocol，就是互联网控制报文协议，那他是怎么控制的呢？ 网络包在互联网的传输过程中，往往会出现很多的问题，当遇到问题的时候就要像解决方法，要传送出消息来，报告情况，这样才可以调整传输的策略">
+<meta property="og:description" content="Ping是如何工作的网络不好的时候你都想去ping一下，那你知道ping是怎么工作的嘛？ping是基于ICMP协议的，ICMP又是什么？ ICMP全称是 Internet Control Message Protocol，就是互联网控制报文协议，那他是怎么控制的呢？">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://yoursite.com/assets/blogImg/ICMP.jpg">
 <meta property="og:image" content="http://yoursite.com/assets/blogImg/ping.jpg">
-<meta property="og:updated_time" content="2019-05-05T02:35:49.929Z">
+<meta property="og:updated_time" content="2019-05-06T01:58:55.083Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="第七讲 ICMP-Ping">
-<meta name="twitter:description" content="Ping是如何工作的网络不好的时候你都想去ping一下，那你知道ping是怎么工作的嘛？ping是基于ICMP协议的，ICMP又是什么？ ICMP全称是 Internet Control Message Protocol，就是互联网控制报文协议，那他是怎么控制的呢？ 网络包在互联网的传输过程中，往往会出现很多的问题，当遇到问题的时候就要像解决方法，要传送出消息来，报告情况，这样才可以调整传输的策略">
+<meta name="twitter:description" content="Ping是如何工作的网络不好的时候你都想去ping一下，那你知道ping是怎么工作的嘛？ping是基于ICMP协议的，ICMP又是什么？ ICMP全称是 Internet Control Message Protocol，就是互联网控制报文协议，那他是怎么控制的呢？">
 <meta name="twitter:image" content="http://yoursite.com/assets/blogImg/ICMP.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -204,6 +204,7 @@ var _hmt = _hmt || [];
     <div class="article-entry" itemprop="articleBody">
       
         <h3 id="Ping是如何工作的"><a href="#Ping是如何工作的" class="headerlink" title="Ping是如何工作的"></a>Ping是如何工作的</h3><p>网络不好的时候你都想去ping一下，那你知道ping是怎么工作的嘛？<br>ping是基于ICMP协议的，ICMP又是什么？ ICMP全称是 Internet Control Message Protocol，就是互联网控制报文协议，那他是怎么控制的呢？</p>
+<a id="more"></a>
 <p>网络包在互联网的传输过程中，往往会出现很多的问题，当遇到问题的时候就要像解决方法，要传送出消息来，报告情况，这样才可以调整传输的策略。这就像古代行军的时候，需要有侦察兵先打探消息，如果派出的侦察兵回来了，那没什么问题，这条路可以走，如果只有侦察兵的马回来了，这条路上就有问题。ICMP的作用就和侦察兵很像</p>
 <p>ICMP报文是封装在IP包里的，他本身非常简单<br><img src="/assets/blogImg/ICMP.jpg" alt="DHCP Offer"> </p>
 <p>ICMP的报文类型有很多，不同类型有不同的代码。主动请求的报文类型为8，主动请求应答报文类型为0。差错报文类型分几种，终点不可达为3，源抑制为4，超市为11，重定向为5.</p>
@@ -326,18 +327,9 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
-    <a href="/2019/05/05/getaway/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          第八讲 网关和静态路由
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/04/28/theHero/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">权游--英雄的谢幕</div>
+    <a href="/2019/05/04/linux-01/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">linux</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -512,11 +504,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">小程序</a>
+                <a href="javascript:void(0)" class="js-tag color5">操作系统</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color4">小程序</a>
               </li>
              
               <li class="article-tag-list-item">
