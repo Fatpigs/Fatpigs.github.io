@@ -6,20 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>小程序 后端第一天 | Hexo</title>
+  <title>linux | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="小程序 后端第一天上午做了tabbar组件，对组件算是有一点简单的了解了吧！也对学习有了一些了解，上午由于一直在凭着自己感觉改代码，浪费了不少时间啊，后来只查了查文档，看了一篇文章就把组件的基础了解了一下，了解了也就知道应该怎么改了。">
-<meta name="keywords" content="技术,blog,小程序">
+  <meta name="description" content="首先来说说为什么要学习操作系统吧！ 操作系统到底要学什么，我一开始是不知道的，大二的时候选修了一门课，linux操作系统，当时对操作系统是一点概念也没有，也不知道这门课到底是学的什么，哈哈，当时上这门课的主要任务是看课外书，最后险过。">
+<meta name="keywords" content="技术,blog,操作系统">
 <meta property="og:type" content="article">
-<meta property="og:title" content="小程序 后端第一天">
-<meta property="og:url" content="http://yoursite.com/2019/04/26/programm-2019-0420-0421/index.html">
+<meta property="og:title" content="linux">
+<meta property="og:url" content="http://yoursite.com/2019/05/16/linux-01/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="小程序 后端第一天上午做了tabbar组件，对组件算是有一点简单的了解了吧！也对学习有了一些了解，上午由于一直在凭着自己感觉改代码，浪费了不少时间啊，后来只查了查文档，看了一篇文章就把组件的基础了解了一下，了解了也就知道应该怎么改了。">
+<meta property="og:description" content="首先来说说为什么要学习操作系统吧！ 操作系统到底要学什么，我一开始是不知道的，大二的时候选修了一门课，linux操作系统，当时对操作系统是一点概念也没有，也不知道这门课到底是学的什么，哈哈，当时上这门课的主要任务是看课外书，最后险过。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-09T07:34:37.495Z">
+<meta property="og:image" content="http://yoursite.com/assets/blogImg/linux1.jpeg">
+<meta property="og:updated_time" content="2019-05-19T08:33:32.773Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="小程序 后端第一天">
-<meta name="twitter:description" content="小程序 后端第一天上午做了tabbar组件，对组件算是有一点简单的了解了吧！也对学习有了一些了解，上午由于一直在凭着自己感觉改代码，浪费了不少时间啊，后来只查了查文档，看了一篇文章就把组件的基础了解了一下，了解了也就知道应该怎么改了。">
+<meta name="twitter:title" content="linux">
+<meta name="twitter:description" content="首先来说说为什么要学习操作系统吧！ 操作系统到底要学什么，我一开始是不知道的，大二的时候选修了一门课，linux操作系统，当时对操作系统是一点概念也没有，也不知道这门课到底是学的什么，哈哈，当时上这门课的主要任务是看课外书，最后险过。">
+<meta name="twitter:image" content="http://yoursite.com/assets/blogImg/linux1.jpeg">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -180,33 +182,68 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-programm-2019-0420-0421" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-linux-01" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      小程序 后端第一天
+      linux
     </h1>
   
 
         
-        <a href="/2019/04/26/programm-2019-0420-0421/" class="archive-article-date">
-  	<time datetime="2019-04-25T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-26</time>
+        <a href="/2019/05/16/linux-01/" class="archive-article-date">
+  	<time datetime="2019-05-15T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-16</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="小程序-后端第一天"><a href="#小程序-后端第一天" class="headerlink" title="小程序 后端第一天"></a>小程序 后端第一天</h3><p>上午做了tabbar组件，对组件算是有一点简单的了解了吧！也对学习有了一些了解，上午由于一直在凭着自己感觉改代码，浪费了不少时间啊，后来只查了查文档，看了一篇文章就把组件的基础了解了一下，了解了也就知道应该怎么改了。<br><a id="more"></a><br>首先每个组件和每个页面一样都有4个文件</p>
-<p>.wxml文件 不用说了就是组件的结构，可以在组件中添加<code>&lt;slot&gt;</code>标签,在引用组件的其他页面可以将自己想要放的内容放进<code>&lt;slot&gt;</code>标签里<br>.wxss文件 组件的样式，这里要说一下组件的wxss不能使用id、属性、标签选择器<br>.json文件 我这里主要就只用了一行代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">将组件属性设置为true</span><br><span class="line">&#123;</span><br><span class="line">    &quot;component&quot;: true,</span><br><span class="line">    &quot;usingComponents&quot;: &#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>.js文件 组件和页面一样也有生命周期，但生命周期的时间点不一样</p>
-<p>组件实例刚刚被创建好时， created 生命周期被触发。此时，组件数据 this.data 就是在 Component 构造器中定义的数据 data。此时还不能调用 setData 。 通常情况下，这个生命周期只应该用于给组件 this 添加一些自定义属性字段。<br><br>在组件完全初始化完毕、进入页面节点树后， attached 生命周期被触发。此时， this.data 已被初始化为组件的当前值。这个生命周期很有用，绝大多数初始化工作可以在这个时机进行。<br><br>在组件离开页面节点树后， detached 生命周期被触发。退出一个页面时，如果组件还在页面节点树中，则 detached 会被触发。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line">var sliderWidth = 96; // 需要设置slider的宽度，用于计算中间位置</span><br><span class="line">// components/component-tag-name.js</span><br><span class="line">Component(&#123;</span><br><span class="line">  /**</span><br><span class="line">   * 组件的属性列表</span><br><span class="line">   */</span><br><span class="line">  options: &#123;</span><br><span class="line">    multipleSlots: true // 在组件定义时的选项中启用多slot支持,我需要用到这个</span><br><span class="line">  &#125;,</span><br><span class="line">  //组件的属性都得在这里注册，这里看网上的别人做的实例被坑了,需要在这里注册属性，不然其他页面不能覆盖这个值</span><br><span class="line">  properties: &#123;</span><br><span class="line">    tabs: Array</span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">  /**</span><br><span class="line">   * 组件的初始数据</span><br><span class="line">   */</span><br><span class="line">  data: &#123;</span><br><span class="line">    activeIndex: 0,</span><br><span class="line">    sliderOffset: 0,</span><br><span class="line">    sliderLeft: 0</span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">  /**</span><br><span class="line">   * 组件的方法列表都在这里定义</span><br><span class="line">   */</span><br><span class="line">  methods: &#123;</span><br><span class="line">    tabClick: function (e) &#123;</span><br><span class="line">      this.setData(&#123;</span><br><span class="line">        sliderOffset: e.currentTarget.offsetLeft,</span><br><span class="line">        activeIndex: e.currentTarget.id</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  attached: function () &#123;</span><br><span class="line">    var that = this;</span><br><span class="line">    wx.getSystemInfo(&#123;</span><br><span class="line">      success: function (res) &#123;</span><br><span class="line">        that.setData(&#123;</span><br><span class="line">          sliderLeft: (res.windowWidth / that.data.tabs.length - sliderWidth) / 2,</span><br><span class="line">          sliderOffset: res.windowWidth / that.data.tabs.length * that.data.activeIndex</span><br><span class="line">        &#125;);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<p>下午学习了数据的基本操作，增加数据，查询数据。以及在商品列表也中跳转到列表详情界面，怎么带着列表页书籍的信息。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">//就是生成列表的代码  在给bookList赋值的时候，直接将objectId的值获取，然后点击这个列表项，直接跳到详情页面，是这样操作的</span><br><span class="line"></span><br><span class="line">.wxml代码</span><br><span class="line">&lt;navigator wx:for=&quot;&#123;&#123;bookList&#125;&#125;&quot; url=&quot;/pages/productlist/productdetail/productdetail?objectId=&#123;&#123;item.objectId&#125;&#125;&quot;&gt;</span><br><span class="line">&lt;/navigator&gt;</span><br><span class="line"></span><br><span class="line">.js代码</span><br><span class="line">var bookList = new Array();</span><br><span class="line">        const query = Bmob.Query(&quot;Books&quot;);</span><br><span class="line">        query.equalTo(&quot;userId&quot;, &quot;==&quot;, userid);</span><br><span class="line">        query.find().then(result =&gt; &#123;</span><br><span class="line">          console.log(result)</span><br><span class="line">          for (var i = 0; i &lt; result.length; i++) &#123;</span><br><span class="line">            var id = result[i].id; //消息的id</span><br><span class="line">            var objectId = result[i].objectId;</span><br><span class="line">            var bookName = result[i].bookName;</span><br><span class="line">            var bookAuthor = result[i].bookAuthor;</span><br><span class="line">            var bookPrice = result[i].bookPrice;</span><br><span class="line">            var bookInfo = result[i].bookInfo;</span><br><span class="line">            var jsonA;</span><br><span class="line">            jsonA = &#123;</span><br><span class="line">              &quot;objectId&quot;: objectId || &apos;&apos;,</span><br><span class="line">              &quot;bookName&quot;: bookName || &apos;&apos;,</span><br><span class="line">              &quot;bookAuthor&quot;: bookAuthor || &apos;&apos;,</span><br><span class="line">              &quot;bookPrice&quot;: bookPrice || &apos;&apos;,</span><br><span class="line">              &quot;bookInfo&quot;: bookInfo || &apos;&apos;</span><br><span class="line">            &#125;</span><br><span class="line">            bookList.push(jsonA);</span><br><span class="line">          &#125;</span><br><span class="line">          console.log(bookList);</span><br><span class="line">          that.setData(&#123;</span><br><span class="line">            bookList: bookList</span><br><span class="line">          &#125;)</span><br></pre></td></tr></table></figure>
+        <p>首先来说说为什么要学习操作系统吧！</p>
+<p>操作系统到底要学什么，我一开始是不知道的，大二的时候选修了一门课，linux操作系统，当时对操作系统是一点概念也没有，也不知道这门课到底是学的什么，哈哈，当时上这门课的主要任务是看课外书，最后险过。<br><a id="more"></a></p>
+<p>现在对操作系统稍稍有了一些原理吧！最为计算机底层知识非常重要的一环，操作系统这一门课可不简简单单的是教我如何使用操作系统，而是编程人员如何编出来这个操作系统。操作系统其实就是一个巨大的程序，他让我们下载的各种桌面程序能在操作系统中运行。这就好比电商程序可以让商品在程序里运转，操作系统这个大程序可以让应用程序在操作系统中运转。操作系统代码中有着大量的数据结构与设计模式，如果把这些知识都吃透了，那编其他的一些程序还会遇到一点问题嘛？<br>这个课程给了操作系统学习的六个阶段</p>
+<ol>
+<li><p>熟练使用 Linux 命令行</p>
+</li>
+<li><p>通过系统调用或者 glibc，学会自己进行程序设计</p>
+</li>
+</ol>
+<p>这一点的意思就是自己可以用别人或者是自己封装一个框架</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//就比如原生js  获取元素</span></span><br><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">"gao"</span>)</span><br><span class="line"><span class="comment">//但用jquery这个库 代码就简单了很多</span></span><br><span class="line">$(<span class="string">"#gao"</span>)</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>了解linux内核机制，反复研习重点突破</li>
+</ol>
+<p>这个就是理解概念了</p>
+<p>进程如何调度？<br>文件如何存储？<br>如何分配内存？<br>不究其代码实现，只理解当这些事件发生的时候，操作系统到底做了什么</p>
+<ol start="4">
+<li>阅读linux源码，聚焦核心逻辑和场景</li>
+</ol>
+<p>看源码了，针对核心模块看，不要全看</p>
+<ol start="5">
+<li>定制linux组件，这个阶段已经可以为所欲为了</li>
+</ol>
+<p>自己实现一个文件操作系统啊，什么的</p>
+<ol start="6">
+<li>面向真实的场景，实践没有终点，人生也没有终点</li>
+</ol>
+<p>我的目标最少是要到levl3吧！现在的操作系统课程也就是只学习levl3，没有涉及到真实操作系统的场景，也没有涉及到代码，如果能到levl4更好。这个专栏还要更新3个月，那我在这3个月中每天写一篇文章，来进行总结，在自己配置的虚拟机上进行linux ubuntu的实践。</p>
+<p>今天写第一门课</p>
+<p>从双击 “QQ” 的这个过程中，都需要用到哪些硬件来说起</p>
+<p>首先你要先用鼠标、键盘点击qq。鼠标和键盘就是<code>输入设备</code></p>
+<p>在显示器上就会显示登陆的框框，显示器也就是操作系统的<code>输出设备</code>，输出设备也不局限于显示器，音响啦，什么的也属于输出设备，因为他对你有输出嘛。<br>显示器上显示的东西是由显卡控制的，无论是显示器还是显卡，都有个<code>坐标</code>的概念，也就是说什么图像在哪里都是定义好了再画上去的，这也就是为什么有的游戏称为显卡杀手，因为画面太精细了，显卡需要做大量的运算，所以就kill掉了显卡。</p>
+<p>显卡有显卡驱动，在操作系统中称为<code>输出设备驱动</code>。鼠标和键盘应该也都有驱动，通过这个来对操作系统进行操作，相当于一个接口，这个我还要查查。</p>
+<p>双击了 “QQ” 之后</p>
+<p>鼠标双击 QQ 会触发一个中断，告诉操作系统，有事要忙了，操作系统中调用中断处理函数，发现双击的是一个 QQ 图标，拿到QQ的二进制执行文件，就可以运行这个文件了。QQ的二进制执行文件是静态的，称为程序，而运行起来的 qq 是不断进行的，成为进程。</p>
+<p>电脑上的程序有很多，什么QQ啊、微博、微信什么的。它们都以二进制的形式存储在硬盘上，硬盘是个物理设备，要按照规定格式化成为文件系统，才能存放这些程序。文件系统需要一个系统进行统一管理，称为文件管理子系统（File Management Subsystem)</p>
+<p>但是这里有个问题啊，就是进程A和进程B都想操作打印机，如果没有什么约束的话，就会A进程打印一行，B进程打印一行，乱七八糟，这可不行，因此打印的代码是存在操作系统内核里的，咱们平时的用操作系统的时候它很乖，井井有条的，这是因为有一个办事大厅(<code>系统调用</code>！)，请求系统调用有对内核操作的API，操作系统可以请求<code>系统调用</code>来使用操作系统内核中的代码。</p>
+<p>在操作系统中，进程的执行也需要分配CPU进行执行，也就是按照二进制代码一行行执行，于是，为了管理进程，还需要一个<code>进程管理子系统</code>。如果运行的进程很多，则一个 CPU 会并发运行多个进程，也就需要CPU的调度能力了。</p>
+<p>在操作系统中不同的进程有不同的内存空间，但是电脑的内存是固定的，所以需要统一的管理和分配，这就需要<code>内存管理子系统</code>。</p>
+<p><img src="/assets/blogImg/linux1.jpeg" alt="linux">  </p>
+<p>这第一堂课是把所有需要学习的内容简单的讲了讲，之后就是分模块的学习，进程如何调用，内存如何分配，等等等！</p>
+
       
 
       
@@ -248,7 +285,7 @@ var _hmt = _hmt || [];
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">小程序</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">操作系统</a>
         		</li>
       		
 		</ul>
@@ -304,7 +341,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/04/26/programm-2019-0420-0421/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/05/16/linux-01/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -318,18 +355,18 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
-    <a href="/2019/04/26/diary-2019-0419-0420/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/05/19/TCP&UDP/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          权游----归来已不是少年
+          UDP与TCP
         
       </div>
     </a>
   
   
-    <a href="/2019/04/15/diary-2019-0412-0414/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">memory</div>
+    <a href="/2019/05/04/ICMP-Ping/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">第七讲 ICMP-Ping</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -356,7 +393,7 @@ var _hmt = _hmt || [];
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#小程序-后端第一天"><span class="toc-number">1.</span> <span class="toc-text">小程序 后端第一天</span></a></li></ol>
+                    目录，不存在的…
                     </div>
                 </span>
             </div>
@@ -370,7 +407,7 @@ var _hmt = _hmt || [];
   
   <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="programm-2019-0420-0421" data-title="小程序 后端第一天" data-url="http://yoursite.com/2019/04/26/programm-2019-0420-0421/"></div>
+	<div class="ds-thread" data-thread-key="linux-01" data-title="linux" data-url="http://yoursite.com/2019/05/16/linux-01/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">

@@ -6,20 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>小程序 后端第一天 | Hexo</title>
+  <title>UDP与TCP | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="小程序 后端第一天上午做了tabbar组件，对组件算是有一点简单的了解了吧！也对学习有了一些了解，上午由于一直在凭着自己感觉改代码，浪费了不少时间啊，后来只查了查文档，看了一篇文章就把组件的基础了解了一下，了解了也就知道应该怎么改了。">
-<meta name="keywords" content="技术,blog,小程序">
+  <meta name="description" content="传输层的两个协议 UDP和TCP首先UDP和TCP有什么区别 TCP是面向连接的，UDP是面向无连接的。 那什么是面向连接？ 所谓的建立连接，是为了在客户端和服务端维护连接，而建立一定的数据结构来维护双方交互的状态，用这样的数据结构来保证所谓的面向连接的特性。 在TCP看来就是三次握手，TCP提供可靠交付、通过TCP连接传输的数据，无差错、不丢失、不重复、并且按序到达，TCP是面向字节流的，而UD">
+<meta name="keywords" content="技术 - blog - 网络协议">
 <meta property="og:type" content="article">
-<meta property="og:title" content="小程序 后端第一天">
-<meta property="og:url" content="http://yoursite.com/2019/04/26/programm-2019-0420-0421/index.html">
+<meta property="og:title" content="UDP与TCP">
+<meta property="og:url" content="http://yoursite.com/2019/05/19/TCP&UDP/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="小程序 后端第一天上午做了tabbar组件，对组件算是有一点简单的了解了吧！也对学习有了一些了解，上午由于一直在凭着自己感觉改代码，浪费了不少时间啊，后来只查了查文档，看了一篇文章就把组件的基础了解了一下，了解了也就知道应该怎么改了。">
+<meta property="og:description" content="传输层的两个协议 UDP和TCP首先UDP和TCP有什么区别 TCP是面向连接的，UDP是面向无连接的。 那什么是面向连接？ 所谓的建立连接，是为了在客户端和服务端维护连接，而建立一定的数据结构来维护双方交互的状态，用这样的数据结构来保证所谓的面向连接的特性。 在TCP看来就是三次握手，TCP提供可靠交付、通过TCP连接传输的数据，无差错、不丢失、不重复、并且按序到达，TCP是面向字节流的，而UD">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-09T07:34:37.495Z">
+<meta property="og:image" content="http://yoursite.com/assets/blogImg/UDP.jpg">
+<meta property="og:updated_time" content="2019-05-19T14:22:30.784Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="小程序 后端第一天">
-<meta name="twitter:description" content="小程序 后端第一天上午做了tabbar组件，对组件算是有一点简单的了解了吧！也对学习有了一些了解，上午由于一直在凭着自己感觉改代码，浪费了不少时间啊，后来只查了查文档，看了一篇文章就把组件的基础了解了一下，了解了也就知道应该怎么改了。">
+<meta name="twitter:title" content="UDP与TCP">
+<meta name="twitter:description" content="传输层的两个协议 UDP和TCP首先UDP和TCP有什么区别 TCP是面向连接的，UDP是面向无连接的。 那什么是面向连接？ 所谓的建立连接，是为了在客户端和服务端维护连接，而建立一定的数据结构来维护双方交互的状态，用这样的数据结构来保证所谓的面向连接的特性。 在TCP看来就是三次握手，TCP提供可靠交付、通过TCP连接传输的数据，无差错、不丢失、不重复、并且按序到达，TCP是面向字节流的，而UD">
+<meta name="twitter:image" content="http://yoursite.com/assets/blogImg/UDP.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -180,33 +182,48 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-programm-2019-0420-0421" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-TCP&amp;UDP" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      小程序 后端第一天
+      UDP与TCP
     </h1>
   
 
         
-        <a href="/2019/04/26/programm-2019-0420-0421/" class="archive-article-date">
-  	<time datetime="2019-04-25T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-26</time>
+        <a href="/2019/05/19/TCP&UDP/" class="archive-article-date">
+  	<time datetime="2019-05-19T08:48:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-19</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="小程序-后端第一天"><a href="#小程序-后端第一天" class="headerlink" title="小程序 后端第一天"></a>小程序 后端第一天</h3><p>上午做了tabbar组件，对组件算是有一点简单的了解了吧！也对学习有了一些了解，上午由于一直在凭着自己感觉改代码，浪费了不少时间啊，后来只查了查文档，看了一篇文章就把组件的基础了解了一下，了解了也就知道应该怎么改了。<br><a id="more"></a><br>首先每个组件和每个页面一样都有4个文件</p>
-<p>.wxml文件 不用说了就是组件的结构，可以在组件中添加<code>&lt;slot&gt;</code>标签,在引用组件的其他页面可以将自己想要放的内容放进<code>&lt;slot&gt;</code>标签里<br>.wxss文件 组件的样式，这里要说一下组件的wxss不能使用id、属性、标签选择器<br>.json文件 我这里主要就只用了一行代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">将组件属性设置为true</span><br><span class="line">&#123;</span><br><span class="line">    &quot;component&quot;: true,</span><br><span class="line">    &quot;usingComponents&quot;: &#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>.js文件 组件和页面一样也有生命周期，但生命周期的时间点不一样</p>
-<p>组件实例刚刚被创建好时， created 生命周期被触发。此时，组件数据 this.data 就是在 Component 构造器中定义的数据 data。此时还不能调用 setData 。 通常情况下，这个生命周期只应该用于给组件 this 添加一些自定义属性字段。<br><br>在组件完全初始化完毕、进入页面节点树后， attached 生命周期被触发。此时， this.data 已被初始化为组件的当前值。这个生命周期很有用，绝大多数初始化工作可以在这个时机进行。<br><br>在组件离开页面节点树后， detached 生命周期被触发。退出一个页面时，如果组件还在页面节点树中，则 detached 会被触发。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line">var sliderWidth = 96; // 需要设置slider的宽度，用于计算中间位置</span><br><span class="line">// components/component-tag-name.js</span><br><span class="line">Component(&#123;</span><br><span class="line">  /**</span><br><span class="line">   * 组件的属性列表</span><br><span class="line">   */</span><br><span class="line">  options: &#123;</span><br><span class="line">    multipleSlots: true // 在组件定义时的选项中启用多slot支持,我需要用到这个</span><br><span class="line">  &#125;,</span><br><span class="line">  //组件的属性都得在这里注册，这里看网上的别人做的实例被坑了,需要在这里注册属性，不然其他页面不能覆盖这个值</span><br><span class="line">  properties: &#123;</span><br><span class="line">    tabs: Array</span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">  /**</span><br><span class="line">   * 组件的初始数据</span><br><span class="line">   */</span><br><span class="line">  data: &#123;</span><br><span class="line">    activeIndex: 0,</span><br><span class="line">    sliderOffset: 0,</span><br><span class="line">    sliderLeft: 0</span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">  /**</span><br><span class="line">   * 组件的方法列表都在这里定义</span><br><span class="line">   */</span><br><span class="line">  methods: &#123;</span><br><span class="line">    tabClick: function (e) &#123;</span><br><span class="line">      this.setData(&#123;</span><br><span class="line">        sliderOffset: e.currentTarget.offsetLeft,</span><br><span class="line">        activeIndex: e.currentTarget.id</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  attached: function () &#123;</span><br><span class="line">    var that = this;</span><br><span class="line">    wx.getSystemInfo(&#123;</span><br><span class="line">      success: function (res) &#123;</span><br><span class="line">        that.setData(&#123;</span><br><span class="line">          sliderLeft: (res.windowWidth / that.data.tabs.length - sliderWidth) / 2,</span><br><span class="line">          sliderOffset: res.windowWidth / that.data.tabs.length * that.data.activeIndex</span><br><span class="line">        &#125;);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<p>下午学习了数据的基本操作，增加数据，查询数据。以及在商品列表也中跳转到列表详情界面，怎么带着列表页书籍的信息。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">//就是生成列表的代码  在给bookList赋值的时候，直接将objectId的值获取，然后点击这个列表项，直接跳到详情页面，是这样操作的</span><br><span class="line"></span><br><span class="line">.wxml代码</span><br><span class="line">&lt;navigator wx:for=&quot;&#123;&#123;bookList&#125;&#125;&quot; url=&quot;/pages/productlist/productdetail/productdetail?objectId=&#123;&#123;item.objectId&#125;&#125;&quot;&gt;</span><br><span class="line">&lt;/navigator&gt;</span><br><span class="line"></span><br><span class="line">.js代码</span><br><span class="line">var bookList = new Array();</span><br><span class="line">        const query = Bmob.Query(&quot;Books&quot;);</span><br><span class="line">        query.equalTo(&quot;userId&quot;, &quot;==&quot;, userid);</span><br><span class="line">        query.find().then(result =&gt; &#123;</span><br><span class="line">          console.log(result)</span><br><span class="line">          for (var i = 0; i &lt; result.length; i++) &#123;</span><br><span class="line">            var id = result[i].id; //消息的id</span><br><span class="line">            var objectId = result[i].objectId;</span><br><span class="line">            var bookName = result[i].bookName;</span><br><span class="line">            var bookAuthor = result[i].bookAuthor;</span><br><span class="line">            var bookPrice = result[i].bookPrice;</span><br><span class="line">            var bookInfo = result[i].bookInfo;</span><br><span class="line">            var jsonA;</span><br><span class="line">            jsonA = &#123;</span><br><span class="line">              &quot;objectId&quot;: objectId || &apos;&apos;,</span><br><span class="line">              &quot;bookName&quot;: bookName || &apos;&apos;,</span><br><span class="line">              &quot;bookAuthor&quot;: bookAuthor || &apos;&apos;,</span><br><span class="line">              &quot;bookPrice&quot;: bookPrice || &apos;&apos;,</span><br><span class="line">              &quot;bookInfo&quot;: bookInfo || &apos;&apos;</span><br><span class="line">            &#125;</span><br><span class="line">            bookList.push(jsonA);</span><br><span class="line">          &#125;</span><br><span class="line">          console.log(bookList);</span><br><span class="line">          that.setData(&#123;</span><br><span class="line">            bookList: bookList</span><br><span class="line">          &#125;)</span><br></pre></td></tr></table></figure>
+        <h2 id="传输层的两个协议-UDP和TCP"><a href="#传输层的两个协议-UDP和TCP" class="headerlink" title="传输层的两个协议 UDP和TCP"></a>传输层的两个协议 UDP和TCP</h2><p>首先UDP和TCP有什么区别</p>
+<p>TCP是面向连接的，UDP是面向无连接的。</p>
+<p>那什么是面向连接？</p>
+<p>所谓的建立连接，是为了在客户端和服务端维护连接，而建立一定的数据结构来维护双方交互的状态，用这样的数据结构来保证所谓的面向连接的特性。</p>
+<p>在TCP看来就是三次握手，TCP提供可靠交付、通过TCP连接传输的数据，无差错、不丢失、不重复、并且按序到达，TCP是面向字节流的，而UDP是基于数据报的，一个一个的发，一个一个的收。</p>
+<p>下面我来分别说一下UDP与TCP协议，要非常详细的说完很难，也得用很大篇幅，况且我的了解也没那么全面，有一本TCP/IP详解这本书，总是听说它是经典也没看过，那里面应该讲的很清楚，我这里就是讲大概的流程。</p>
+<p>首先先来说一说UDP协议，UDP协议很简单，包头也很简单，来看一下包头</p>
+<p><img src="/assets/blogImg/UDP.jpg" alt="UDP"></p>
+<p>因为要发给具体应用，所以需要源端口、目的端口，然后是UDP长度，说的是UDP头部和UDP数据报总长度，校验用来对UDP头部和UDP数据进行校验，UDP的包真的是简单的一塌糊涂，所以也容易理解。</p>
+<h3 id="UDP的三大特点"><a href="#UDP的三大特点" class="headerlink" title="UDP的三大特点"></a>UDP的三大特点</h3><p>1.沟通简单  互相发送数据包不用建立连接什么的，直接发，沟通很简单，没有花花肠子(大量的数据结构、处理逻辑、包头字段)<br>2.轻信他人  谁都可以给他传数据，他也可以随便给别人传数据<br>3.愣头青、做事不懂权变  不懂拥塞控制，就是个发</p>
+<h3 id="UDP三大使用场景"><a href="#UDP三大使用场景" class="headerlink" title="UDP三大使用场景"></a>UDP三大使用场景</h3><p>1.需要资源少，在网络情况比较好的内网，或者对于丢包不敏感的应用</p>
+<p>2.不需要一对一沟通，建立连接，而是可以广播的应用<br>这里很好理解，广播的应用如果用TCP的话，我想想都麻烦，每个沟通都得建立连接、三次握手，麻烦死了<br>3.需要处理速度快，时延低，可以容忍少数丢包，但是要求即使网络拥塞，也要一往无前的发！(这里针对TCP说的，TCP就是网络拥塞的时候，减少发包数量，本来都拥塞了，还减少发包，结果可想而知)</p>
+<h3 id="基于UDP的五个例子"><a href="#基于UDP的五个例子" class="headerlink" title="基于UDP的五个例子"></a>基于UDP的五个例子</h3><p>1.网页或者 APP 的访问</p>
+<p>2.流媒体的协议(也就是直播平台什么的)</p>
+<p>直播平台有的时候网不好，包发不到，就会卡住，如果是TCP的话，就会一直等着那个包来才播放下一帧，但是其实我们看直播的时候，卡住就卡住了播放后面的就好了。</p>
+<p>3.实时游戏</p>
+<p>对实时性要求比较强，TCP还得建立连接好麻烦费时</p>
+<p>4.IoT 物联网</p>
+<p>对实时性要求也比较高</p>
+<p>5.移动通信领域</p>
+<p>知道了DHCP是基于 UDP的，也的确是，因为索要ip的时候是发的广播，TCP的话麻烦死了</p>
+
       
 
       
@@ -240,15 +257,7 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">技术</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">blog</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">小程序</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">技术 - blog - 网络协议</a>
         		</li>
       		
 		</ul>
@@ -304,7 +313,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/04/26/programm-2019-0420-0421/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/05/19/TCP&UDP/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -318,18 +327,9 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
-    <a href="/2019/04/26/diary-2019-0419-0420/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          权游----归来已不是少年
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/04/15/diary-2019-0412-0414/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">memory</div>
+    <a href="/2019/05/16/linux-01/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">linux</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -356,7 +356,7 @@ var _hmt = _hmt || [];
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#小程序-后端第一天"><span class="toc-number">1.</span> <span class="toc-text">小程序 后端第一天</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#传输层的两个协议-UDP和TCP"><span class="toc-number">1.</span> <span class="toc-text">传输层的两个协议 UDP和TCP</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#UDP的三大特点"><span class="toc-number">1.1.</span> <span class="toc-text">UDP的三大特点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#UDP三大使用场景"><span class="toc-number">1.2.</span> <span class="toc-text">UDP三大使用场景</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#基于UDP的五个例子"><span class="toc-number">1.3.</span> <span class="toc-text">基于UDP的五个例子</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -370,7 +370,7 @@ var _hmt = _hmt || [];
   
   <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="programm-2019-0420-0421" data-title="小程序 后端第一天" data-url="http://yoursite.com/2019/04/26/programm-2019-0420-0421/"></div>
+	<div class="ds-thread" data-thread-key="TCP&amp;UDP" data-title="UDP与TCP" data-url="http://yoursite.com/2019/05/19/TCP&amp;UDP/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">

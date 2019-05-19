@@ -6,20 +6,15 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>小程序 后端第一天 | Hexo</title>
+  <title>Tag: 技术 - blog - 网络协议 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="小程序 后端第一天上午做了tabbar组件，对组件算是有一点简单的了解了吧！也对学习有了一些了解，上午由于一直在凭着自己感觉改代码，浪费了不少时间啊，后来只查了查文档，看了一篇文章就把组件的基础了解了一下，了解了也就知道应该怎么改了。">
-<meta name="keywords" content="技术,blog,小程序">
-<meta property="og:type" content="article">
-<meta property="og:title" content="小程序 后端第一天">
-<meta property="og:url" content="http://yoursite.com/2019/04/26/programm-2019-0420-0421/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/tags/技术-blog-网络协议/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="小程序 后端第一天上午做了tabbar组件，对组件算是有一点简单的了解了吧！也对学习有了一些了解，上午由于一直在凭着自己感觉改代码，浪费了不少时间啊，后来只查了查文档，看了一篇文章就把组件的基础了解了一下，了解了也就知道应该怎么改了。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-09T07:34:37.495Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="小程序 后端第一天">
-<meta name="twitter:description" content="小程序 后端第一天上午做了tabbar组件，对组件算是有一点简单的了解了吧！也对学习有了一些了解，上午由于一直在凭着自己感觉改代码，浪费了不少时间啊，后来只查了查文档，看了一篇文章就把组件的基础了解了一下，了解了也就知道应该怎么改了。">
+<meta name="twitter:title" content="Hexo">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -180,222 +175,60 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-programm-2019-0420-0421" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      小程序 后端第一天
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2019" class="archive-year">2019</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2019/05/19/TCP&UDP/" class="archive-article-date">
+  	<time datetime="2019-05-19T08:48:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-19</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2019/05/19/TCP&UDP/">UDP与TCP</a>
     </h1>
   
 
-        
-        <a href="/2019/04/26/programm-2019-0420-0421/" class="archive-article-date">
-  	<time datetime="2019-04-25T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-26</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="小程序-后端第一天"><a href="#小程序-后端第一天" class="headerlink" title="小程序 后端第一天"></a>小程序 后端第一天</h3><p>上午做了tabbar组件，对组件算是有一点简单的了解了吧！也对学习有了一些了解，上午由于一直在凭着自己感觉改代码，浪费了不少时间啊，后来只查了查文档，看了一篇文章就把组件的基础了解了一下，了解了也就知道应该怎么改了。<br><a id="more"></a><br>首先每个组件和每个页面一样都有4个文件</p>
-<p>.wxml文件 不用说了就是组件的结构，可以在组件中添加<code>&lt;slot&gt;</code>标签,在引用组件的其他页面可以将自己想要放的内容放进<code>&lt;slot&gt;</code>标签里<br>.wxss文件 组件的样式，这里要说一下组件的wxss不能使用id、属性、标签选择器<br>.json文件 我这里主要就只用了一行代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">将组件属性设置为true</span><br><span class="line">&#123;</span><br><span class="line">    &quot;component&quot;: true,</span><br><span class="line">    &quot;usingComponents&quot;: &#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>.js文件 组件和页面一样也有生命周期，但生命周期的时间点不一样</p>
-<p>组件实例刚刚被创建好时， created 生命周期被触发。此时，组件数据 this.data 就是在 Component 构造器中定义的数据 data。此时还不能调用 setData 。 通常情况下，这个生命周期只应该用于给组件 this 添加一些自定义属性字段。<br><br>在组件完全初始化完毕、进入页面节点树后， attached 生命周期被触发。此时， this.data 已被初始化为组件的当前值。这个生命周期很有用，绝大多数初始化工作可以在这个时机进行。<br><br>在组件离开页面节点树后， detached 生命周期被触发。退出一个页面时，如果组件还在页面节点树中，则 detached 会被触发。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line">var sliderWidth = 96; // 需要设置slider的宽度，用于计算中间位置</span><br><span class="line">// components/component-tag-name.js</span><br><span class="line">Component(&#123;</span><br><span class="line">  /**</span><br><span class="line">   * 组件的属性列表</span><br><span class="line">   */</span><br><span class="line">  options: &#123;</span><br><span class="line">    multipleSlots: true // 在组件定义时的选项中启用多slot支持,我需要用到这个</span><br><span class="line">  &#125;,</span><br><span class="line">  //组件的属性都得在这里注册，这里看网上的别人做的实例被坑了,需要在这里注册属性，不然其他页面不能覆盖这个值</span><br><span class="line">  properties: &#123;</span><br><span class="line">    tabs: Array</span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">  /**</span><br><span class="line">   * 组件的初始数据</span><br><span class="line">   */</span><br><span class="line">  data: &#123;</span><br><span class="line">    activeIndex: 0,</span><br><span class="line">    sliderOffset: 0,</span><br><span class="line">    sliderLeft: 0</span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">  /**</span><br><span class="line">   * 组件的方法列表都在这里定义</span><br><span class="line">   */</span><br><span class="line">  methods: &#123;</span><br><span class="line">    tabClick: function (e) &#123;</span><br><span class="line">      this.setData(&#123;</span><br><span class="line">        sliderOffset: e.currentTarget.offsetLeft,</span><br><span class="line">        activeIndex: e.currentTarget.id</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  attached: function () &#123;</span><br><span class="line">    var that = this;</span><br><span class="line">    wx.getSystemInfo(&#123;</span><br><span class="line">      success: function (res) &#123;</span><br><span class="line">        that.setData(&#123;</span><br><span class="line">          sliderLeft: (res.windowWidth / that.data.tabs.length - sliderWidth) / 2,</span><br><span class="line">          sliderOffset: res.windowWidth / that.data.tabs.length * that.data.activeIndex</span><br><span class="line">        &#125;);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<p>下午学习了数据的基本操作，增加数据，查询数据。以及在商品列表也中跳转到列表详情界面，怎么带着列表页书籍的信息。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">//就是生成列表的代码  在给bookList赋值的时候，直接将objectId的值获取，然后点击这个列表项，直接跳到详情页面，是这样操作的</span><br><span class="line"></span><br><span class="line">.wxml代码</span><br><span class="line">&lt;navigator wx:for=&quot;&#123;&#123;bookList&#125;&#125;&quot; url=&quot;/pages/productlist/productdetail/productdetail?objectId=&#123;&#123;item.objectId&#125;&#125;&quot;&gt;</span><br><span class="line">&lt;/navigator&gt;</span><br><span class="line"></span><br><span class="line">.js代码</span><br><span class="line">var bookList = new Array();</span><br><span class="line">        const query = Bmob.Query(&quot;Books&quot;);</span><br><span class="line">        query.equalTo(&quot;userId&quot;, &quot;==&quot;, userid);</span><br><span class="line">        query.find().then(result =&gt; &#123;</span><br><span class="line">          console.log(result)</span><br><span class="line">          for (var i = 0; i &lt; result.length; i++) &#123;</span><br><span class="line">            var id = result[i].id; //消息的id</span><br><span class="line">            var objectId = result[i].objectId;</span><br><span class="line">            var bookName = result[i].bookName;</span><br><span class="line">            var bookAuthor = result[i].bookAuthor;</span><br><span class="line">            var bookPrice = result[i].bookPrice;</span><br><span class="line">            var bookInfo = result[i].bookInfo;</span><br><span class="line">            var jsonA;</span><br><span class="line">            jsonA = &#123;</span><br><span class="line">              &quot;objectId&quot;: objectId || &apos;&apos;,</span><br><span class="line">              &quot;bookName&quot;: bookName || &apos;&apos;,</span><br><span class="line">              &quot;bookAuthor&quot;: bookAuthor || &apos;&apos;,</span><br><span class="line">              &quot;bookPrice&quot;: bookPrice || &apos;&apos;,</span><br><span class="line">              &quot;bookInfo&quot;: bookInfo || &apos;&apos;</span><br><span class="line">            &#125;</span><br><span class="line">            bookList.push(jsonA);</span><br><span class="line">          &#125;</span><br><span class="line">          console.log(bookList);</span><br><span class="line">          that.setData(&#123;</span><br><span class="line">            bookList: bookList</span><br><span class="line">          &#125;)</span><br></pre></td></tr></table></figure>
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">技术</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">blog</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">小程序</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">技术 - blog - 网络协议</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/04/26/programm-2019-0420-0421/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2019/04/26/diary-2019-0419-0420/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          权游----归来已不是少年
-        
-      </div>
-    </a>
   
   
-    <a href="/2019/04/15/diary-2019-0412-0414/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">memory</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-        <div class="toc-container tooltip-left">
-            <i class="icon-font icon-category"></i>
-            <div class="tooltip tooltip-east">
-                <span class="tooltip-item">
-                </span>
-                <span class="tooltip-content">
-                    <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#小程序-后端第一天"><span class="toc-number">1.</span> <span class="toc-text">小程序 后端第一天</span></a></li></ol>
-                    </div>
-                </span>
-            </div>
-        </div>
-        
-    </div>
-</aside>
-
-
-
-  
-  <div class="duoshuo">
-	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="programm-2019-0420-0421" data-title="小程序 后端第一天" data-url="http://yoursite.com/2019/04/26/programm-2019-0420-0421/"></div>
-	<!-- 多说评论框 end -->
-	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-	<script type="text/javascript">
-	var duoshuoQuery = {short_name:"true"};
-	(function() {
-		var ds = document.createElement('script');
-		ds.type = 'text/javascript';ds.async = true;
-		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-		ds.charset = 'UTF-8';
-		(document.getElementsByTagName('head')[0] 
-		 || document.getElementsByTagName('body')[0]).appendChild(ds);
-	})();
-	</script>
-	<!-- 多说公共JS代码 end -->
-</div>
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-
-  
+    
 
 
           </div>
@@ -418,9 +251,9 @@ var _hmt = _hmt || [];
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,

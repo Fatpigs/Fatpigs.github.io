@@ -177,35 +177,47 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-getaway" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-TCP&amp;UDP" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/05/04/getaway/">第八讲 网关和静态路由与动态路由</a>
+      <a class="article-title" href="/2019/05/19/TCP&UDP/">UDP与TCP</a>
     </h1>
   
 
         
-        <a href="/2019/05/04/getaway/" class="archive-article-date">
-  	<time datetime="2019-05-03T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-04</time>
+        <a href="/2019/05/19/TCP&UDP/" class="archive-article-date">
+  	<time datetime="2019-05-19T08:48:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-19</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>先自我复习一下之前的知识</p>
-<p>在任何一台机器上，如果想要访问另一台机器，首先需要通过CIDR判断是不是属于同一个网段，如果是同一个网段，直接ARP获取目标机器的MAC地址就把消息发过去了。<br>如果不是属于同一个网段，那就把消息发给网关，然后再怎么转发包就看网关的了。</p>
-<p>这里涉及到几个问题</p>
-<ol>
-<li>网关是什么?</li>
-<li>网关怎么把包转发出去?</li>
-</ol>
-<p>还需要了解一个基础知识MAC头和IP头是什么样的，我们先来看这个基础知识</p>
-<p>在 MAC 头里面，先是目标 MAC 地址，然后是源 MAC 地址，然后有一个协议类型，用来说明里面是 IP 协议。IP 头里面的版本号，目前主流的还是 IPv4，TTL就是包最大存活时间，还有 8 位标识协议。这里到了下一层的协议，也就是，是 TCP 还是 UDP。最重要的就是源 IP 和目标 IP。先是源 IP 地址，然后是目标 IP 地址。</p>
+        <h2 id="传输层的两个协议-UDP和TCP"><a href="#传输层的两个协议-UDP和TCP" class="headerlink" title="传输层的两个协议 UDP和TCP"></a>传输层的两个协议 UDP和TCP</h2><p>首先UDP和TCP有什么区别</p>
+<p>TCP是面向连接的，UDP是面向无连接的。</p>
+<p>那什么是面向连接？</p>
+<p>所谓的建立连接，是为了在客户端和服务端维护连接，而建立一定的数据结构来维护双方交互的状态，用这样的数据结构来保证所谓的面向连接的特性。</p>
+<p>在TCP看来就是三次握手，TCP提供可靠交付、通过TCP连接传输的数据，无差错、不丢失、不重复、并且按序到达，TCP是面向字节流的，而UDP是基于数据报的，一个一个的发，一个一个的收。</p>
+<p>下面我来分别说一下UDP与TCP协议，要非常详细的说完很难，也得用很大篇幅，况且我的了解也没那么全面，有一本TCP/IP详解这本书，总是听说它是经典也没看过，那里面应该讲的很清楚，我这里就是讲大概的流程。</p>
+<p>首先先来说一说UDP协议，UDP协议很简单，包头也很简单，来看一下包头</p>
+<p><img src="/assets/blogImg/UDP.jpg" alt="UDP"></p>
+<p>因为要发给具体应用，所以需要源端口、目的端口，然后是UDP长度，说的是UDP头部和UDP数据报总长度，校验用来对UDP头部和UDP数据进行校验，UDP的包真的是简单的一塌糊涂，所以也容易理解。</p>
+<h3 id="UDP的三大特点"><a href="#UDP的三大特点" class="headerlink" title="UDP的三大特点"></a>UDP的三大特点</h3><p>1.沟通简单  互相发送数据包不用建立连接什么的，直接发，沟通很简单，没有花花肠子(大量的数据结构、处理逻辑、包头字段)<br>2.轻信他人  谁都可以给他传数据，他也可以随便给别人传数据<br>3.愣头青、做事不懂权变  不懂拥塞控制，就是个发</p>
+<h3 id="UDP三大使用场景"><a href="#UDP三大使用场景" class="headerlink" title="UDP三大使用场景"></a>UDP三大使用场景</h3><p>1.需要资源少，在网络情况比较好的内网，或者对于丢包不敏感的应用</p>
+<p>2.不需要一对一沟通，建立连接，而是可以广播的应用<br>这里很好理解，广播的应用如果用TCP的话，我想想都麻烦，每个沟通都得建立连接、三次握手，麻烦死了<br>3.需要处理速度快，时延低，可以容忍少数丢包，但是要求即使网络拥塞，也要一往无前的发！(这里针对TCP说的，TCP就是网络拥塞的时候，减少发包数量，本来都拥塞了，还减少发包，结果可想而知)</p>
+<h3 id="基于UDP的五个例子"><a href="#基于UDP的五个例子" class="headerlink" title="基于UDP的五个例子"></a>基于UDP的五个例子</h3><p>1.网页或者 APP 的访问</p>
+<p>2.流媒体的协议(也就是直播平台什么的)</p>
+<p>直播平台有的时候网不好，包发不到，就会卡住，如果是TCP的话，就会一直等着那个包来才播放下一帧，但是其实我们看直播的时候，卡住就卡住了播放后面的就好了。</p>
+<p>3.实时游戏</p>
+<p>对实时性要求比较强，TCP还得建立连接好麻烦费时</p>
+<p>4.IoT 物联网</p>
+<p>对实时性要求也比较高</p>
+<p>5.移动通信领域</p>
+<p>知道了DHCP是基于 UDP的，也的确是，因为索要ip的时候是发的广播，TCP的话麻烦死了</p>
 
       
 
@@ -219,15 +231,7 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">技术</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">blog</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">网络协议</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">技术 - blog - 网络协议</a>
         		</li>
       		
 		</ul>
@@ -237,7 +241,7 @@ var _hmt = _hmt || [];
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/05/04/getaway/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/05/19/TCP&UDP/">展开全文 >></a>
         </p>
       
 
@@ -267,31 +271,35 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-BGP-OSPF" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-linux-01" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/05/04/BGP-OSPF/">第九讲 路由协议</a>
+      <a class="article-title" href="/2019/05/16/linux-01/">linux</a>
     </h1>
   
 
         
-        <a href="/2019/05/04/BGP-OSPF/" class="archive-article-date">
-  	<time datetime="2019-05-03T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-04</time>
+        <a href="/2019/05/16/linux-01/" class="archive-article-date">
+  	<time datetime="2019-05-15T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-16</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
+        <p>首先来说说为什么要学习操作系统吧！</p>
+<p>操作系统到底要学什么，我一开始是不知道的，大二的时候选修了一门课，linux操作系统，当时对操作系统是一点概念也没有，也不知道这门课到底是学的什么，哈哈，当时上这门课的主要任务是看课外书，最后险过。<br>
+        
+          <a class="article-more-a" href="/2019/05/16/linux-01/#more">more >></a>
         
       
 
       
-    </div>
+    </p></div>
     <div class="article-info article-info-index">
       
       
@@ -308,7 +316,7 @@ var _hmt = _hmt || [];
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">网络协议</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">操作系统</a>
         		</li>
       		
 		</ul>
@@ -318,7 +326,7 @@ var _hmt = _hmt || [];
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/05/04/BGP-OSPF/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/05/16/linux-01/">展开全文 >></a>
         </p>
       
 
@@ -432,19 +440,19 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-linux-01" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-BGP-OSPF" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/05/04/linux-01/">linux</a>
+      <a class="article-title" href="/2019/05/04/BGP-OSPF/">第九讲 路由协议</a>
     </h1>
   
 
         
-        <a href="/2019/05/04/linux-01/" class="archive-article-date">
+        <a href="/2019/05/04/BGP-OSPF/" class="archive-article-date">
   	<time datetime="2019-05-03T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-04</time>
 </a>
         
@@ -452,15 +460,11 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>首先来说说为什么要学习操作系统吧！</p>
-<p>操作系统到底要学什么，我一开始是不知道的，大二的时候选修了一门课，linux操作系统，当时对操作系统是一点概念也没有，也不知道这门课到底是学的什么，哈哈，当时上这门课的主要任务是看课外书，最后险过。<br>
-        
-          <a class="article-more-a" href="/2019/05/04/linux-01/#more">more >></a>
         
       
 
       
-    </p></div>
+    </div>
     <div class="article-info article-info-index">
       
       
@@ -477,7 +481,7 @@ var _hmt = _hmt || [];
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">操作系统</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">网络协议</a>
         		</li>
       		
 		</ul>
@@ -487,7 +491,97 @@ var _hmt = _hmt || [];
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/05/04/linux-01/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/05/04/BGP-OSPF/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-getaway" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/05/04/getaway/">第八讲 网关和静态路由与动态路由</a>
+    </h1>
+  
+
+        
+        <a href="/2019/05/04/getaway/" class="archive-article-date">
+  	<time datetime="2019-05-03T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-04</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>先自我复习一下之前的知识</p>
+<p>在任何一台机器上，如果想要访问另一台机器，首先需要通过CIDR判断是不是属于同一个网段，如果是同一个网段，直接ARP获取目标机器的MAC地址就把消息发过去了。<br>如果不是属于同一个网段，那就把消息发给网关，然后再怎么转发包就看网关的了。</p>
+<p>这里涉及到几个问题</p>
+<ol>
+<li>网关是什么?</li>
+<li>网关怎么把包转发出去?</li>
+</ol>
+<p>还需要了解一个基础知识MAC头和IP头是什么样的，我们先来看这个基础知识</p>
+<p>在 MAC 头里面，先是目标 MAC 地址，然后是源 MAC 地址，然后有一个协议类型，用来说明里面是 IP 协议。IP 头里面的版本号，目前主流的还是 IPv4，TTL就是包最大存活时间，还有 8 位标识协议。这里到了下一层的协议，也就是，是 TCP 还是 UDP。最重要的就是源 IP 和目标 IP。先是源 IP 地址，然后是目标 IP 地址。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">技术</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">blog</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">网络协议</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/05/04/getaway/">展开全文 >></a>
         </p>
       
 
@@ -920,83 +1014,6 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-diary-2019-0412-0414" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/04/15/diary-2019-0412-0414/">memory</a>
-    </h1>
-  
-
-        
-        <a href="/2019/04/15/diary-2019-0412-0414/" class="archive-article-date">
-  	<time datetime="2019-04-14T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-15</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <!--<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=28949128&auto=0&height=66" style="margin-left: -10px;"></iframe> -->
-<p>人的回忆真是个奇怪的东西，正在经历的事情变成了回忆，那这回忆便会增添了几分色彩。回忆总是会轻松一些的！我回忆着18岁的种种，尽管那时候生活并不阳光明媚，但是现在回忆起来，那时候的生活很美好的，每天有夕阳看，每天有自己的世界！</p>
-        
-          <a class="article-more-a" href="/2019/04/15/diary-2019-0412-0414/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">diary</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/04/15/diary-2019-0412-0414/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -1106,7 +1123,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">技术 - blog - 网络协议</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">diary</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">操作系统</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1115,10 +1140,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">操作系统</a>
               </li>
             
             <div class="clearfix"></div>
