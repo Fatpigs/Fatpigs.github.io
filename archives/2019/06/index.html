@@ -6,23 +6,15 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>UDP与TCP | Hexo</title>
+  <title>Archives: 2019/6 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="传输层的两个协议 UDP和TCP首先UDP和TCP有什么区别 TCP是面向连接的，UDP是面向无连接的。 那什么是面向连接？">
-<meta name="keywords" content="技术 - blog - 网络协议">
-<meta property="og:type" content="article">
-<meta property="og:title" content="UDP与TCP">
-<meta property="og:url" content="http://yoursite.com/2019/05/19/TCP&UDP/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/archives/2019/06/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="传输层的两个协议 UDP和TCP首先UDP和TCP有什么区别 TCP是面向连接的，UDP是面向无连接的。 那什么是面向连接？">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="http://yoursite.com/assets/blogImg/UDP.jpg">
-<meta property="og:image" content="http://yoursite.com/assets/blogImg/TCP1.jpg">
-<meta property="og:updated_time" content="2019-06-06T08:10:25.460Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="UDP与TCP">
-<meta name="twitter:description" content="传输层的两个协议 UDP和TCP首先UDP和TCP有什么区别 TCP是面向连接的，UDP是面向无连接的。 那什么是面向连接？">
-<meta name="twitter:image" content="http://yoursite.com/assets/blogImg/UDP.jpg">
+<meta name="twitter:title" content="Hexo">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -183,240 +175,68 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-TCP&amp;UDP" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      UDP与TCP
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2019" class="archive-year">2019</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2019/06/06/programm-2019-0606-0607 /" class="archive-article-date">
+  	<time datetime="2019-06-05T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-06</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2019/06/06/programm-2019-0606-0607 /">小程序 商品双栏分类、商品收藏</a>
     </h1>
   
 
-        
-        <a href="/2019/05/19/TCP&UDP/" class="archive-article-date">
-  	<time datetime="2019-05-19T08:48:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-19</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="传输层的两个协议-UDP和TCP"><a href="#传输层的两个协议-UDP和TCP" class="headerlink" title="传输层的两个协议 UDP和TCP"></a>传输层的两个协议 UDP和TCP</h2><p>首先UDP和TCP有什么区别</p>
-<p>TCP是面向连接的，UDP是面向无连接的。</p>
-<p>那什么是面向连接？<br><a id="more"></a><br>所谓的建立连接，是为了在客户端和服务端维护连接，而建立一定的数据结构来维护双方交互的状态，用这样的数据结构来保证所谓的面向连接的特性。</p>
-<p>在TCP看来就是三次握手，TCP提供可靠交付、通过TCP连接传输的数据，无差错、不丢失、不重复、并且按序到达，TCP是面向字节流的，而UDP是基于数据报的，一个一个的发，一个一个的收。</p>
-<p>下面我来分别说一下UDP与TCP协议，要非常详细的说完很难，也得用很大篇幅，况且我的了解也没那么全面，有一本TCP/IP详解这本书，总是听说它是经典也没看过，那里面应该讲的很清楚，我这里就是讲大概的流程。</p>
-<p>首先先来说一说UDP协议，UDP协议很简单，包头也很简单，来看一下包头</p>
-<p><img src="/assets/blogImg/UDP.jpg" alt="UDP"></p>
-<p>因为要发给具体应用，所以需要源端口、目的端口，然后是UDP长度，说的是UDP头部和UDP数据报总长度，校验用来对UDP头部和UDP数据进行校验，UDP的包真的是简单的一塌糊涂，所以也容易理解。</p>
-<h3 id="UDP的三大特点"><a href="#UDP的三大特点" class="headerlink" title="UDP的三大特点"></a>UDP的三大特点</h3><p>1.沟通简单  互相发送数据包不用建立连接什么的，直接发，沟通很简单，没有花花肠子(大量的数据结构、处理逻辑、包头字段)<br>2.轻信他人  谁都可以给他传数据，他也可以随便给别人传数据<br>3.愣头青、做事不懂权变  不懂拥塞控制，就是个发</p>
-<h3 id="UDP三大使用场景"><a href="#UDP三大使用场景" class="headerlink" title="UDP三大使用场景"></a>UDP三大使用场景</h3><p>1.需要资源少，在网络情况比较好的内网，或者对于丢包不敏感的应用</p>
-<p>2.不需要一对一沟通，建立连接，而是可以广播的应用<br>这里很好理解，广播的应用如果用TCP的话，我想想都麻烦，每个沟通都得建立连接、三次握手，麻烦死了<br>3.需要处理速度快，时延低，可以容忍少数丢包，但是要求即使网络拥塞，也要一往无前的发！(这里针对TCP说的，TCP就是网络拥塞的时候，减少发包数量，本来都拥塞了，还减少发包，结果可想而知)</p>
-<h3 id="基于UDP的五个例子"><a href="#基于UDP的五个例子" class="headerlink" title="基于UDP的五个例子"></a>基于UDP的五个例子</h3><p>1.网页或者 APP 的访问</p>
-<p>2.流媒体的协议(也就是直播平台什么的)</p>
-<p>直播平台有的时候网不好，包发不到，就会卡住，如果是TCP的话，就会一直等着那个包来才播放下一帧，但是其实我们看直播的时候，卡住就卡住了播放后面的就好了。</p>
-<p>3.实时游戏</p>
-<p>对实时性要求比较强，TCP还得建立连接好麻烦费时</p>
-<p>4.IoT 物联网</p>
-<p>对实时性要求也比较高</p>
-<p>5.移动通信领域</p>
-<p>知道了DHCP是基于 UDP的，也的确是，因为索要ip的时候是发的广播，TCP的话麻烦死了</p>
-<h3 id="TCP"><a href="#TCP" class="headerlink" title="TCP"></a>TCP</h3><p>UDP说完了，来说一说TCP，首先来看一看TCP的包头是什么样的</p>
-<p><img src="/assets/blogImg/TCP1.jpg" alt="TCP"></p>
-<p>首先是源端口号、目的端口号，因为想要发送给应用所以需要源、目的端口号。接下来是包的序号和确认序号，为什么要给包编号，因为如果不编号的号就会乱序，因为包的到达顺序不一定与发送顺序一样，不编号的话就不能确定哪个先来，哪个后到。确认序号就是确认包有没有送到给一次确认，如果长时间没有确认那就认为包没发到，重发包，这个可以用来避免丢包问题。</p>
-<p>接下来是一些状态位，例如SYN是发起一个连接、ACK是回复、RST是重新发送、FIN是结束连接等等。这些带状态位的包会引起双方状态的变更。</p>
-<p>再来看窗口大小，窗口大小是做流量控制和拥塞控制的，这个在后面详细会讲。</p>
-<p>通过对TCP头的解析，可以看出，TCP应重点关注下面几个内容</p>
-<blockquote>
-<p>顺序问题，稳重不乱<br>丢包问题，承诺靠谱<br>连接维护，有始有终<br>流量控制，把握分寸<br>拥塞控制，知进知退      </p>
-</blockquote>
-<h3 id="连接维护"><a href="#连接维护" class="headerlink" title="连接维护"></a>连接维护</h3><p>TCP的三次握手</p>
-<p>也称为  请求 -&gt; 应答 -&gt; 应答之应答 的三个回合</p>
-<p>TCP的四次握手</p>
-
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">技术 - blog - 网络协议</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">技术</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">blog</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">小程序</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/05/19/TCP&UDP/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2019/06/06/programm-2019-0606-0607 /" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          小程序 商品双栏分类、商品收藏
-        
-      </div>
-    </a>
   
   
-    <a href="/2019/05/16/linux-01/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">linux</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-        <div class="toc-container tooltip-left">
-            <i class="icon-font icon-category"></i>
-            <div class="tooltip tooltip-east">
-                <span class="tooltip-item">
-                </span>
-                <span class="tooltip-content">
-                    <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#传输层的两个协议-UDP和TCP"><span class="toc-number">1.</span> <span class="toc-text">传输层的两个协议 UDP和TCP</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#UDP的三大特点"><span class="toc-number">1.1.</span> <span class="toc-text">UDP的三大特点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#UDP三大使用场景"><span class="toc-number">1.2.</span> <span class="toc-text">UDP三大使用场景</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#基于UDP的五个例子"><span class="toc-number">1.3.</span> <span class="toc-text">基于UDP的五个例子</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#TCP"><span class="toc-number">1.4.</span> <span class="toc-text">TCP</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#连接维护"><span class="toc-number">1.5.</span> <span class="toc-text">连接维护</span></a></li></ol></li></ol>
-                    </div>
-                </span>
-            </div>
-        </div>
-        
-    </div>
-</aside>
-
-
-
-  
-  <div class="duoshuo">
-	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="TCP&amp;UDP" data-title="UDP与TCP" data-url="http://yoursite.com/2019/05/19/TCP&amp;UDP/"></div>
-	<!-- 多说评论框 end -->
-	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-	<script type="text/javascript">
-	var duoshuoQuery = {short_name:"true"};
-	(function() {
-		var ds = document.createElement('script');
-		ds.type = 'text/javascript';ds.async = true;
-		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-		ds.charset = 'UTF-8';
-		(document.getElementsByTagName('head')[0] 
-		 || document.getElementsByTagName('body')[0]).appendChild(ds);
-	})();
-	</script>
-	<!-- 多说公共JS代码 end -->
-</div>
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-
-  
+    
 
 
           </div>
@@ -439,8 +259,8 @@ var _hmt = _hmt || [];
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
